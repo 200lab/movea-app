@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:movea_app/pages/home_page.dart';
+import 'package:flutter/services.dart';
+import 'package:movea_app/pages/new-user/on_boarding.dart';
 
 void main() {
   runApp(MyApp());
@@ -8,13 +9,19 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    //white status bar
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+      statusBarColor: Colors.white,
+      statusBarBrightness: Brightness.dark,
+    ));
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
+        fontFamily: 'montserrat',
         primarySwatch: Colors.blue,
       ),
-      home: HomePage(),
+      home: OnBoardingPage(),
     );
   }
 }
-
