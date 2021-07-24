@@ -24,14 +24,18 @@ class SignUpPage extends StatelessWidget {
                       'Create New\nYour Account',
                       style: TxtStyle.tittleStyle,
                     )),
-                IconButton(
+                Container(
+                  margin: EdgeInsets.only(left: 10,top: 5),
+                  child: IconButton(
                     onPressed: () {
                       Navigator.pop(context);
                     },
-                    icon: Icon(
-                      Icons.arrow_back_ios_new_rounded,
+                    icon: FaIcon(
+                      FontAwesomeIcons.arrowLeft,
                       color: AppColor.white,
-                    ))
+                    ),
+                  ),
+                )
               ]),
             ),
             Stack(
@@ -42,9 +46,13 @@ class SignUpPage extends StatelessWidget {
                   child: Center(
                     child: Container(
                       width: MediaQuery.of(context).size.height / 6,
+                      child: FittedBox(
+                          fit: BoxFit.cover,
+                          child: Image.asset(
+                              'assets/illustrations/photo_profile.png')),
                       decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(100),
-                          color: AppColor.blueMain),
+                        borderRadius: BorderRadius.circular(100),
+                      ),
                     ),
                   ),
                 ),
