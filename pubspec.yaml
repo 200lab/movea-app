@@ -51,7 +51,7 @@ flutter:
     - assets/casters/
     - assets/others/
     - assets/posters/
-    - assets/illustrations/
+    - assets/illustrations
 
   fonts:
     - family: montserrat

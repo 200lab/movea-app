@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:movea_app/pages/new-user/on_boarding.dart';
+import 'package:movea_app/pages/new-user/sign_in.dart';
+import 'package:movea_app/pages/new-user/sign_up.dart';
 
 void main() {
   runApp(MyApp());

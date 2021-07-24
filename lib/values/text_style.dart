@@ -3,15 +3,10 @@ import 'package:movea_app/values/app_color.dart';
 
 class TxtStyle {
   static TextStyle tittleStyle = TextStyle(
-    fontSize: 28,
-    color: AppColor.white,
-    fontWeight: FontWeight.w600,
-    // TextStyle(
-    //     color: AppColor.white,
-    //     fontSize: 30,
-    //     fontWeight: FontWeight.w500,
-    //     height: 1.5),
-  );
+      fontSize: 30,
+      color: AppColor.white,
+      fontWeight: FontWeight.w600,
+      height: 1.5);
 
   static TextStyle thinStyle = TextStyle(
       fontSize: 22,
@@ -27,4 +22,6 @@ class TxtStyle {
 
   static TextStyle btnTxtStyle = TextStyle(
       fontSize: 22, color: AppColor.white, fontWeight: FontWeight.w500);
+  static TextStyle fieldTextStyle =
+      TextStyle(color: AppColor.white, fontSize: 16);
 }

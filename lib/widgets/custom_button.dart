@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:movea_app/values/app_color.dart';
 
 class CustomButton extends StatelessWidget {
   final width;

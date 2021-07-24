@@ -50,28 +50,29 @@ class OnBoardingPage extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.only(top: 30),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      'Already have an Account? ',
-                      style: TxtStyle.smallThinStyle,
-                    ),
-                    InkWell(
-                      onTap: () {},
-                      child: Text(
-                        'Sign In',
-                        style: TextStyle(
-                          color: AppColor.lightBlue,
-                          fontSize: 18,
-                          fontWeight: FontWeight.w700,
-                        ),
+                  padding: EdgeInsets.only(top: 30),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'Create new account? ',
+                        style: TxtStyle.fieldTextStyle,
                       ),
-                    )
-                  ],
-                ),
-              )
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (_) => SignInPage()));
+                        },
+                        child: Text(
+                          'Sign In',
+                          style: TextStyle(
+                              fontSize: 16,
+                              color: AppColor.lightBlue,
+                              fontWeight: FontWeight.w600),
+                        ),
+                      )
+                    ],
+                  ))
             ],
           ),
         ),
