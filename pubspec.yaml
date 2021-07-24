@@ -23,6 +23,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  font_awesome_flutter: ^9.1.0
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -51,7 +52,7 @@ flutter:
     - assets/casters/
     - assets/others/
     - assets/posters/
-    - assets/illustrations
+    - assets/illustrations/
 
   fonts:
     - family: montserrat

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:movea_app/values/app_color.dart';
 import 'package:movea_app/values/text_style.dart';
 import 'package:movea_app/widgets/custom_button.dart';
@@ -36,24 +37,33 @@ class SignUpPage extends StatelessWidget {
             Stack(
               children: [
                 Container(
-                  width: MediaQuery.of(context).size.width,
-                  height: 175,
+                  height: MediaQuery.of(context).size.height / 6,
                   margin: EdgeInsets.symmetric(vertical: 25),
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(100),
-                      color: AppColor.lightBlue),
+                  child: Center(
+                    child: Container(
+                      width: MediaQuery.of(context).size.height / 6,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(100),
+                          color: AppColor.blueMain),
+                    ),
+                  ),
                 ),
                 //btn add _ remove
                 InkWell(
+                  onTap: () {},
                   child: Container(
-                    width: MediaQuery.of(context).size.width,
-                    alignment: Alignment.bottomCenter,
-                    height: 175,
-                    child: ImageIcon(
-                      AssetImage('assets/icons/Add.png'),
-                      color: AppColor.blueMain,
-                    ),
-                  ),
+                      height: MediaQuery.of(context).size.height / 5 + 7,
+                      alignment: Alignment.bottomCenter,
+                      child: Container(
+                        decoration: BoxDecoration(
+                            color: AppColor.blueMain,
+                            borderRadius: BorderRadius.circular(100)),
+                        child: FaIcon(
+                          FontAwesomeIcons.plusCircle,
+                          size: 30,
+                          color: AppColor.white,
+                        ),
+                      )),
                 )
               ],
             ),
