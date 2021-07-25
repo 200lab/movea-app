@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:movea_app/pages/new-user/fav_gerne.dart';
 import 'package:movea_app/values/app_color.dart';
 import 'package:movea_app/values/text_style.dart';
 import 'package:movea_app/widgets/custom_button.dart';
@@ -12,6 +13,9 @@ class SignUpPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColor.darkerBackground,
+      // appBar: AppBar(
+      //   title: Text('Create New\nYour Account'),
+      // ),
       body: SafeArea(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -21,11 +25,11 @@ class SignUpPage extends StatelessWidget {
                 Container(
                     alignment: Alignment.center,
                     child: Text(
-                      'Create New\nYour Account',
+                      ' Create New\nYour Account',
                       style: TxtStyle.tittleStyle,
                     )),
                 Container(
-                  margin: EdgeInsets.only(left: 10,top: 5),
+                  margin: EdgeInsets.only(left: 10, top: 5),
                   child: IconButton(
                     onPressed: () {
                       Navigator.pop(context);
@@ -38,43 +42,31 @@ class SignUpPage extends StatelessWidget {
                 )
               ]),
             ),
-            Stack(
-              children: [
-                Container(
-                  height: MediaQuery.of(context).size.height / 6,
-                  margin: EdgeInsets.symmetric(vertical: 25),
-                  child: Center(
-                    child: Container(
-                      width: MediaQuery.of(context).size.height / 6,
-                      child: FittedBox(
-                          fit: BoxFit.cover,
-                          child: Image.asset(
-                              'assets/illustrations/photo_profile.png')),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(100),
-                      ),
-                    ),
-                  ),
+            Container(
+              width: MediaQuery.of(context).size.height / 6,
+              height: MediaQuery.of(context).size.height / 6,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  //fit: BoxFit.cover,
+                  scale: 0.75,
+                  image: AssetImage('assets/illustrations/photo_profile.png'),
                 ),
-                //btn add _ remove
-                InkWell(
-                  onTap: () {},
-                  child: Container(
-                      height: MediaQuery.of(context).size.height / 5 + 7,
-                      alignment: Alignment.bottomCenter,
-                      child: Container(
-                        decoration: BoxDecoration(
-                            color: AppColor.blueMain,
-                            borderRadius: BorderRadius.circular(100)),
-                        child: FaIcon(
-                          FontAwesomeIcons.plusCircle,
-                          size: 30,
-                          color: AppColor.white,
-                        ),
-                      )),
+              ),
+              child: Container(
+                alignment: Alignment.bottomCenter,
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: AppColor.blueMain,
+                      borderRadius: BorderRadius.circular(100)),
+                  child: FaIcon(
+                    FontAwesomeIcons.plusCircle,
+                    size: 30,
+                    color: AppColor.white,
+                  ),
                 )
-              ],
+              ),
             ),
+          
             Expanded(
                 child: TxtBox(
               height: MediaQuery.of(context).size.height / 14,
@@ -106,7 +98,10 @@ class SignUpPage extends StatelessWidget {
                   'Sign In',
                   style: TxtStyle.btnTxtStyle,
                 ),
-                fnc: () {},
+                fnc: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (_) => FavoriteGernePage()));
+                },
               ),
             ),
             Expanded(child: Container())

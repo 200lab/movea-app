@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:movea_app/pages/new-user/on_boarding.dart';
+import 'package:movea_app/values/app_color.dart';
 
 void main() {
   runApp(MyApp());
@@ -18,9 +19,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        fontFamily: 'montserrat',
-        primarySwatch: Colors.blue,
-      ),
+          fontFamily: 'montserrat',
+          primarySwatch: Colors.blue,
+          appBarTheme: AppBarTheme(backgroundColor: AppColor.darkerBackground)),
       home: OnBoardingPage(),
     );
   }
