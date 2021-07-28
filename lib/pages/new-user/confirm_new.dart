@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:movea_app/pages/my-ticket/home_page.dart';
 import 'package:movea_app/values/app_color.dart';
-import 'package:movea_app/values/home_page.dart';
 import 'package:movea_app/values/text_style.dart';
+import 'package:movea_app/widgets/circle_avatar.dart';
 import 'package:movea_app/widgets/custom_button.dart';
 import 'package:movea_app/widgets/top_bar.dart';
 
@@ -27,15 +28,9 @@ class _ConfirmNewPageState extends State<ConfirmNewPage> {
             SizedBox(
               height: MediaQuery.of(context).size.height / 8,
             ),
-            Container(
-              height: MediaQuery.of(context).size.height / 5,
-              width: MediaQuery.of(context).size.height / 5,
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  fit: BoxFit.cover,
-                  image: AssetImage('assets/illustrations/photo_profile.png'),
-                ),
-              ),
+            CustomCircleAvatar(
+              height: MediaQuery.of(context).size.height/5,
+              width: MediaQuery.of(context).size.height/5,
             ),
             SizedBox(
               height: MediaQuery.of(context).size.height / 12,

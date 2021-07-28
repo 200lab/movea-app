@@ -3,6 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'package:movea_app/pages/new-user/sign_up.dart';
 import 'package:movea_app/values/app_color.dart';
 import 'package:movea_app/values/text_style.dart';
+import 'package:movea_app/widgets/bottom_sentence.dart';
 import 'package:movea_app/widgets/custom_button.dart';
 import 'package:movea_app/widgets/txt_box.dart';
 
@@ -74,54 +75,39 @@ class SignInPage extends StatelessWidget {
           ),
           Expanded(
               flex: 1,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    'Create new account? ',
-                    style: TxtStyle.fieldTextStyle,
-                  ),
-                  InkWell(
-                    onTap: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (_) => SignUpPage()));
-                    },
-                    child: Text(
-                      'Sign Up',
-                      style: TextStyle(
-                          fontSize: 16,
-                          color: AppColor.lightBlue,
-                          fontWeight: FontWeight.w600),
-                    ),
-                  )
-                ],
+              child: BottomSentence(
+                content1: 'Create new account?',
+                content2: 'Sign Up',
+                fnc: () {
+                  Navigator.push(
+                      context, MaterialPageRoute(builder: (_) => SignUpPage()));
+                },
               )),
           Expanded(
-              flex: 3,
-              child: Container(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      height: 75,
-                      width: 75,
-                      decoration: BoxDecoration(
-                          color: AppColor.darkBackground,
-                          borderRadius: BorderRadius.circular(100)),
-                    ),
-                    SizedBox(
-                      width: 30,
-                    ),
-                    Container(
-                      height: 75,
-                      width: 75,
-                      decoration: BoxDecoration(
-                          color: AppColor.darkBackground,
-                          borderRadius: BorderRadius.circular(100)),
-                    ),
-                  ],
+            flex: 3,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  height: 75,
+                  width: 75,
+                  decoration: BoxDecoration(
+                      color: AppColor.darkBackground,
+                      borderRadius: BorderRadius.circular(100)),
                 ),
-              ))
+                SizedBox(
+                  width: 30,
+                ),
+                Container(
+                  height: 75,
+                  width: 75,
+                  decoration: BoxDecoration(
+                      color: AppColor.darkBackground,
+                      borderRadius: BorderRadius.circular(100)),
+                ),
+              ],
+            ),
+          )
         ],
       ),
     );

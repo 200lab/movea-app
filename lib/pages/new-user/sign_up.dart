@@ -31,18 +31,21 @@ class SignUpPage extends StatelessWidget {
                   image: AssetImage('assets/illustrations/photo_profile.png'),
                 ),
               ),
-              child: Container(
-                  alignment: Alignment.bottomCenter,
-                  child: Container(
-                    decoration: BoxDecoration(
-                        color: AppColor.blueMain,
-                        borderRadius: BorderRadius.circular(100)),
-                    child: FaIcon(
-                      FontAwesomeIcons.plusCircle,
-                      size: 30,
-                      color: AppColor.white,
-                    ),
-                  )),
+              child: GestureDetector(
+                onTap: () {},
+                child: Container(
+                    alignment: Alignment.bottomCenter,
+                    child: Container(
+                      decoration: BoxDecoration(
+                          color: AppColor.blueMain,
+                          borderRadius: BorderRadius.circular(100)),
+                      child: FaIcon(
+                        FontAwesomeIcons.plusCircle,
+                        size: 30,
+                        color: AppColor.white,
+                      ),
+                    )),
+              ),
             ),
             Expanded(
                 child: TxtBox(
