@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:movea_app/pages/new-user/sign_up.dart';
-import 'package:movea_app/values/app_color.dart';
-import 'package:movea_app/values/text_style.dart';
+import 'package:movea_app/config/themes/dark_theme.dart';
+import 'package:movea_app/constants/app_constants.dart';
+import 'package:movea_app/modules/auth/screens/sign_up.dart';
 import 'package:movea_app/widgets/bottom_sentence.dart';
 import 'package:movea_app/widgets/custom_button.dart';
 import 'package:movea_app/widgets/txt_box.dart';
@@ -13,7 +13,7 @@ class SignInPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColor.darkerBackground,
+      backgroundColor: kColorDarkerBackground,
       body: Column(
         children: [
           Expanded(flex: 2, child: Container()),
@@ -29,7 +29,7 @@ class SignInPage extends StatelessWidget {
                 margin: EdgeInsets.only(left: 30),
                 alignment: Alignment.centerLeft,
                 child: Text('Welcome Back,\nMovie Lover!',
-                    style: TxtStyle.tittleStyle),
+                    style: kTextTittleStyle),
               )),
           Expanded(
               flex: 4,
@@ -55,19 +55,19 @@ class SignInPage extends StatelessWidget {
                 margin: EdgeInsets.only(top: 10, right: 30),
                 child: Text(
                   'Forget Password?',
-                  style: TxtStyle.fieldTextStyle,
+                  style: kTextFieldStyle,
                 ),
               )),
           CustomButton(
             width: MediaQuery.of(context).size.width * 3 / 5,
             height: MediaQuery.of(context).size.height / 14,
             radius: 20.0,
-            clr: AppColor.blueMain,
+            clr: kColorBlueMain,
             child: Text(
               'Login',
               style: TextStyle(
                 fontSize: 20,
-                color: AppColor.white,
+                color: kColorWhite,
                 fontWeight: FontWeight.w600,
               ),
             ),
@@ -92,7 +92,7 @@ class SignInPage extends StatelessWidget {
                   height: 75,
                   width: 75,
                   decoration: BoxDecoration(
-                      color: AppColor.darkBackground,
+                      color: kColorDarkBackground,
                       borderRadius: BorderRadius.circular(100)),
                 ),
                 SizedBox(
@@ -102,7 +102,7 @@ class SignInPage extends StatelessWidget {
                   height: 75,
                   width: 75,
                   decoration: BoxDecoration(
-                      color: AppColor.darkBackground,
+                      color: kColorDarkBackground,
                       borderRadius: BorderRadius.circular(100)),
                 ),
               ],

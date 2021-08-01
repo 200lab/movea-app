@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:movea_app/values/app_color.dart';
-import 'package:movea_app/values/text_style.dart';
+import 'package:movea_app/config/themes/dark_theme.dart';
+import 'package:movea_app/constants/app_constants.dart';
 
 class TxtBox extends StatelessWidget {
   final height;
@@ -20,7 +20,7 @@ class TxtBox extends StatelessWidget {
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
                 border: Border.all(
-                  color: AppColor.white,
+                  color: kColorWhite,
                   // color: AppColor.blueMain
                 )),
             child: Padding(
@@ -29,15 +29,15 @@ class TxtBox extends StatelessWidget {
                   decoration: InputDecoration(
                       hintText: content,
                       border: InputBorder.none,
-                      hintStyle: TxtStyle.fieldTextStyle)),
+                      hintStyle: kTextFieldStyle)),
             )),
         //lable
         Container(
-          color: AppColor.darkerBackground,
+          color: kColorDarkerBackground,
           margin: EdgeInsets.only(left: MediaQuery.of(context).size.width / 9),
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 8),
-            child: Text(content, style: TxtStyle.smallThinStyle),
+            child: Text(content, style: kTextSmallThinStyle),
           ),
         )
       ],

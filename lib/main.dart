@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:movea_app/pages/my-ticket/checkout_movie_page.dart';
-import 'package:movea_app/pages/my-ticket/select_cinema_page.dart';
-import 'package:movea_app/pages/my-ticket/success_checkout_page.dart';
-import 'package:movea_app/pages/new-user/sign_up.dart';
-import 'package:movea_app/values/app_color.dart';
+import 'package:movea_app/config/themes/dark_theme.dart';
+import 'package:movea_app/modules/auth/screens/sign_up.dart';
 
 void main() {
   runApp(MyApp());
@@ -22,10 +19,11 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
+          scaffoldBackgroundColor: kColorDarkerBackground,
           fontFamily: 'montserrat',
           primarySwatch: Colors.blue,
-          appBarTheme: AppBarTheme(backgroundColor: AppColor.darkerBackground)),
-      home: SelectCinemaPage(),
+          appBarTheme: AppBarTheme(backgroundColor: kColorDarkerBackground)),
+      home: SignUpPage(),
     );
   }
 }

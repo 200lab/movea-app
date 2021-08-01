@@ -1,26 +1,29 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:movea_app/pages/new-user/fav_genre.dart';
-import 'package:movea_app/values/app_color.dart';
-import 'package:movea_app/values/text_style.dart';
+import 'package:movea_app/config/themes/dark_theme.dart';
+import 'package:movea_app/constants/app_constants.dart';
+import 'package:movea_app/modules/auth/screens/fav_genre.dart';
 import 'package:movea_app/widgets/custom_button.dart';
 import 'package:movea_app/widgets/top_bar.dart';
 import 'package:movea_app/widgets/txt_box.dart';
 
-class SignUpPage extends StatelessWidget {
+class SignUpPage extends StatefulWidget {
   const SignUpPage({Key? key}) : super(key: key);
 
   @override
+  _SignUpPageState createState() => _SignUpPageState();
+}
+
+class _SignUpPageState extends State<SignUpPage> {
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColor.darkerBackground,
+      backgroundColor: kColorDarkerBackground,
       body: SafeArea(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Expanded(
-              child: TopBarCard(content: 'Create New\nYour Account')
-            ),
+            Expanded(child: TopBarCard(content: 'Create New\nYour Account')),
             Container(
               width: MediaQuery.of(context).size.height / 6,
               height: MediaQuery.of(context).size.height / 6,
@@ -37,12 +40,12 @@ class SignUpPage extends StatelessWidget {
                     alignment: Alignment.bottomCenter,
                     child: Container(
                       decoration: BoxDecoration(
-                          color: AppColor.blueMain,
+                          color: kColorBlueMain,
                           borderRadius: BorderRadius.circular(100)),
                       child: FaIcon(
                         FontAwesomeIcons.plusCircle,
                         size: 30,
-                        color: AppColor.white,
+                        color: kColorWhite,
                       ),
                     )),
               ),
@@ -73,10 +76,10 @@ class SignUpPage extends StatelessWidget {
                 height: MediaQuery.of(context).size.height / 14,
                 width: MediaQuery.of(context).size.width * 3 / 5,
                 radius: 20.0,
-                clr: AppColor.blueMain,
+                clr: kColorBlueMain,
                 child: Text(
                   'Sign In',
-                  style: TxtStyle.btnTxtStyle,
+                  style: kTextButtonStyle,
                 ),
                 fnc: () {
                   Navigator.push(context,

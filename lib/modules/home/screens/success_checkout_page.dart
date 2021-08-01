@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:movea_app/pages/my-ticket/home_page.dart';
-import 'package:movea_app/values/app_color.dart';
-import 'package:movea_app/values/text_style.dart';
+import 'package:movea_app/config/themes/dark_theme.dart';
+import 'package:movea_app/constants/app_constants.dart';
+import 'package:movea_app/modules/home/screens/home_page.dart';
 import 'package:movea_app/widgets/bottom_sentence.dart';
 import 'package:movea_app/widgets/custom_button.dart';
 
@@ -11,7 +11,6 @@ class WalletCheckoutPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColor.darkerBackground,
       body: SafeArea(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -27,18 +26,18 @@ class WalletCheckoutPage extends StatelessWidget {
             ),
             Text(
               'Happy Watching!',
-              style: TxtStyle.tittleStyle,
+              style: kTextTittleStyle,
             ),
             Text(
               'You have successfully\nbought the ticket',
-              style: TxtStyle.thinStyle,
+              style: kTextThinStyle,
               textAlign: TextAlign.center,
             ),
             CustomButton(
               height: MediaQuery.of(context).size.height / 14,
               width: MediaQuery.of(context).size.width * 4 / 5,
               radius: 20.0,
-              clr: AppColor.blueMain,
+              clr: kColorBlueMain,
               fnc: () {},
               child: Text('My Ticket'),
             ),

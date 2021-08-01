@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:movea_app/values/app_color.dart';
-import 'package:movea_app/values/text_style.dart';
+import 'package:movea_app/config/themes/dark_theme.dart';
+import 'package:movea_app/constants/app_constants.dart';
 
 class TopBarCard extends StatelessWidget {
   final content;
@@ -15,7 +15,7 @@ class TopBarCard extends StatelessWidget {
           child: Text(
             content,
             textAlign: TextAlign.center,
-            style: TxtStyle.tittleStyle,
+            style: kTextTittleStyle,
           )),
       Container(
         margin: EdgeInsets.only(left: 10, top: 5),
@@ -25,7 +25,7 @@ class TopBarCard extends StatelessWidget {
           },
           icon: FaIcon(
             FontAwesomeIcons.arrowLeft,
-            color: AppColor.white,
+            color: kColorWhite,
           ),
         ),
       )
