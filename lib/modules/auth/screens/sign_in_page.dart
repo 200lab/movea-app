@@ -3,6 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'package:movea_app/config/themes/dark_theme.dart';
 import 'package:movea_app/constants/app_constants.dart';
 import 'package:movea_app/modules/auth/screens/sign_up_page.dart';
+import 'package:movea_app/modules/home/screens/home_page.dart';
 import 'package:movea_app/widgets/bottom_sentence.dart';
 import 'package:movea_app/widgets/custom_button.dart';
 import 'package:movea_app/widgets/txt_box.dart';
@@ -71,7 +72,10 @@ class SignInPage extends StatelessWidget {
                 fontWeight: FontWeight.w600,
               ),
             ),
-            fnc: () {},
+            fnc: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (_) => HomePage()));
+            },
           ),
           Expanded(
               flex: 1,

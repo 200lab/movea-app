@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:movea_app/config/themes/dark_theme.dart';
-import 'package:movea_app/modules/auth/screens/on_boarding.dart';
-import 'package:movea_app/modules/auth/screens/sign_up.dart';
+
+import 'modules/auth/screens/on_boarding_page.dart';
 
 void main() {
   runApp(MyApp());

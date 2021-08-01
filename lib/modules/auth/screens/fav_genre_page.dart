@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:movea_app/config/themes/dark_theme.dart';
 import 'package:movea_app/constants/app_constants.dart';
-import 'package:movea_app/modules/auth/screens/confirm_new.dart';
+import 'package:movea_app/modules/auth/screens/confirm_new_page.dart';
 import 'package:movea_app/widgets/custom_button.dart';
 
 class FavoriteGenrePage extends StatefulWidget {
