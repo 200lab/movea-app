@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:movea_app/config/themes/dark_theme.dart';
 import 'package:movea_app/constants/app_constants.dart';
-import 'package:movea_app/modules/auth/screens/sign_up.dart';
+import 'package:movea_app/modules/auth/screens/sign_up_page.dart';
 import 'package:movea_app/widgets/bottom_sentence.dart';
 import 'package:movea_app/widgets/custom_button.dart';
 import 'package:movea_app/widgets/txt_box.dart';

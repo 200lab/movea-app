@@ -6,14 +6,14 @@ import 'package:movea_app/widgets/circle_avatar.dart';
 import 'package:movea_app/widgets/custom_button.dart';
 import 'package:movea_app/widgets/top_bar.dart';
 
-class ConfirmNewPage extends StatefulWidget {
-  const ConfirmNewPage({Key? key}) : super(key: key);
+class ConfirmNewScreen extends StatefulWidget {
+  const ConfirmNewScreen({Key? key}) : super(key: key);
 
   @override
-  _ConfirmNewPageState createState() => _ConfirmNewPageState();
+  _ConfirmNewScreenState createState() => _ConfirmNewScreenState();
 }
 
-class _ConfirmNewPageState extends State<ConfirmNewPage> {
+class _ConfirmNewScreenState extends State<ConfirmNewScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:movea_app/config/themes/dark_theme.dart';
 import 'package:movea_app/constants/app_constants.dart';
-import 'package:movea_app/modules/auth/screens/sign_in.dart';
+import 'package:movea_app/modules/auth/screens/sign_in_page.dart';
 import 'package:movea_app/widgets/custom_button.dart';
 
 class OnBoardingPage extends StatelessWidget {

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:movea_app/config/themes/dark_theme.dart';
+import 'package:movea_app/modules/auth/screens/on_boarding.dart';
 import 'package:movea_app/modules/auth/screens/sign_up.dart';
 
 void main() {
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
           fontFamily: 'montserrat',
           primarySwatch: Colors.blue,
           appBarTheme: AppBarTheme(backgroundColor: kColorDarkerBackground)),
-      home: SignUpPage(),
+      home: OnBoardingPage(),
     );
   }
 }
