@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:movea_app/config/themes/dark_theme.dart';
 import 'package:movea_app/constants/app_constants.dart';
+import 'package:movea_app/modules/auth/screens/fav_genre_page.dart';
 import 'package:movea_app/widgets/custom_button.dart';
 import 'package:movea_app/widgets/top_bar.dart';
 import 'package:movea_app/widgets/txt_box.dart';
 
-import 'fav_genre_page.dart';
 
 class SignUpPage extends StatefulWidget {
   const SignUpPage({Key? key}) : super(key: key);
@@ -19,7 +19,6 @@ class _SignUpPageState extends State<SignUpPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: kColorDarkerBackground,
       body: SafeArea(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

@@ -86,7 +86,6 @@ pubspec.lock
 ios/Flutter/flutter_export_environment.sh
 *.pem
 
-/ios/Runner.xcodeproj/
 IDEWorkspaceChecks.plist
 /android/app/google-services.json
 settings_aar.gradle
