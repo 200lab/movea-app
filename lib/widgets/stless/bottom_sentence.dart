@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:movea_app/config/themes/dark_theme.dart';
-import 'package:movea_app/constants/app_constants.dart';
+import 'package:movea_app/config/themes/text_style.dart';
 
 class BottomSentence extends StatelessWidget {
   final content1;
@@ -17,7 +16,7 @@ class BottomSentence extends StatelessWidget {
       children: [
         Text(
           content1,
-          style: kTextFieldStyle,
+          style: TxtStyle.heading4,
         ),
         InkWell(
           onTap: fnc,
@@ -25,7 +24,7 @@ class BottomSentence extends StatelessWidget {
             content2,
             style: TextStyle(
                 fontSize: 16,
-                color: kColorLightBlue,
+                color: Colors.red,
                 fontWeight: FontWeight.w600),
           ),
         )

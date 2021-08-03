@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:movea_app/config/themes/dark_theme.dart';
-
-import 'modules/auth/screens/on_boarding_page.dart';
+import 'package:movea_app/config/themes/app_color.dart';
+import 'modules/common_widget/common_widget_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -20,11 +19,15 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-          scaffoldBackgroundColor: kColorDarkerBackground,
+          primaryColor: DarkTheme.blueMain,
+          scaffoldBackgroundColor: DarkTheme.darkerBackground,
           fontFamily: 'montserrat',
-          primarySwatch: Colors.blue,
-          appBarTheme: AppBarTheme(backgroundColor: kColorDarkerBackground)),
-      home: OnBoardingPage(),
+          textTheme: Theme.of(context).textTheme.apply(
+            bodyColor: DarkTheme.white,
+            displayColor: DarkTheme.white
+          )
+      ),
+      home: CommonWidgetPage(),
     );
   }
 }
