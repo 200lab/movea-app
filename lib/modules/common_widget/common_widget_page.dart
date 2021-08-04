@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:movea_app/config/themes/app_color.dart';
 import 'package:movea_app/config/themes/text_style.dart';
+import 'package:movea_app/constants/assets_path.dart';
 import 'package:movea_app/widgets/stless/classic_button.dart';
 import 'package:movea_app/widgets/top_bar.dart';
 
@@ -71,21 +72,55 @@ class CommonWidgetPage extends StatelessWidget {
             ),
           ),
           buildSizedBox(),
-          Container(
-            height: height / 14,
-            child: Row(
-              children: [
-                GradientButton(
-                  width: height/14,
-                    gradientColor1: GradientPalette.gradientLightBlue1,
-                    gradientColor2: GradientPalette.gradientLightBlue2,
-                    child: FaIcon(
-                      FontAwesomeIcons.filter,
-                      color: DarkTheme.white,
-                    ),
-                )
-              ],
-            ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              SquareGradientButton(
+                  onTap: () {},
+                  gradientColor1: GradientPalette.gradientBlue1,
+                  gradientColor2: GradientPalette.gradientBlue2,
+                  edge: height / 14,
+                  radidus: 14,
+                  child: ImageIcon(AssetImage(AssetPath.iconControl),
+                      color: DarkTheme.white)),
+              SquareGradientButton(
+                  onTap: () {},
+                  gradientColor1: GradientPalette.gradientLightBlue1,
+                  gradientColor2: GradientPalette.gradientLightBlue2,
+                  edge: height / 14,
+                  radidus: 100,
+                  child: ImageIcon(AssetImage(AssetPath.iconTopUp),
+                      color: DarkTheme.white)),
+              GestureDetector(
+                onTap: () {},
+                child: Container(
+                  width: width / 10,
+                  height: width / 10,
+                  decoration: BoxDecoration(
+                      color: DarkTheme.blueMain, shape: BoxShape.circle),
+                  child: ImageIcon(
+                    AssetImage(AssetPath.iconPlay),
+                    color: DarkTheme.white,
+                  ),
+                ),
+              )
+            ],
+          ),
+          buildSizedBox(),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              CircleButton(
+                assetPath: AssetPath.iconAdd,
+                bgColor: DarkTheme.blueMain,
+                onTap: () {},
+              ),
+              CircleButton(
+                assetPath: AssetPath.iconCancel,
+                bgColor: DarkTheme.red,
+                onTap: () {},
+              ),
+            ],
           )
         ],
       ),

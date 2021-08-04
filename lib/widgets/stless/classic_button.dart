@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:movea_app/config/themes/app_color.dart';
+import 'package:movea_app/constants/assets_path.dart';
 
 class ClassicButton extends StatelessWidget {
   final double? width;
@@ -65,6 +67,7 @@ class GradientButton extends StatelessWidget {
 
 class SquareGradientButton extends StatelessWidget {
   final double? edge;
+  final double? radidus;
 
   final Color gradientColor1;
   final Color gradientColor2;
@@ -75,6 +78,7 @@ class SquareGradientButton extends StatelessWidget {
   const SquareGradientButton(
       {Key? key,
       this.edge,
+      this.radidus,
       required this.gradientColor1,
       required this.gradientColor2,
       this.child,
@@ -90,10 +94,32 @@ class SquareGradientButton extends StatelessWidget {
           height: edge,
           width: edge,
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(radidus!),
               gradient: LinearGradient(
                   colors: <Color>[gradientColor1, gradientColor2])),
           child: child),
+    );
+  }
+}
+
+class CircleButton extends StatelessWidget {
+  final String? assetPath;
+  final Color? bgColor;
+  final VoidCallback? onTap;
+
+  const CircleButton({Key? key, this.assetPath, this.bgColor,this.onTap}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        decoration: BoxDecoration(color: bgColor, shape: BoxShape.circle),
+        child: ImageIcon(
+          AssetImage(assetPath!),
+          color: DarkTheme.white,
+        ),
+      ),
     );
   }
 }

@@ -1,17 +1,14 @@
 import 'package:flutter/material.dart';
 
 class TxtStyle {
-  static const heading1 = TextStyle(
-    fontWeight: FontWeight.w600,
-    fontSize: 32,
-    height: 1.2,
-  );
-  static const heading2 =
+  static const heading1 =
       TextStyle(fontWeight: FontWeight.w600, fontSize: 28, height: 1.2);
-  static const heading3 =
+  static const heading2 =
       TextStyle(fontWeight: FontWeight.w600, fontSize: 24, height: 1.2);
-  static const heading4 =
+  static const heading3 =
       TextStyle(fontWeight: FontWeight.w600, fontSize: 20, height: 1.2);
+  static const heading4 =
+      TextStyle(fontWeight: FontWeight.w600, fontSize: 16, height: 1.2);
 }
 
 class GradientText extends StatelessWidget {
@@ -34,7 +31,7 @@ class GradientText extends StatelessWidget {
         style: TextStyle(
           // The color must be set to white for this to work
           color: Colors.white,
-          fontSize: 20,
+          fontSize: 16,
         ),
       ),
     );

@@ -12,7 +12,7 @@ class TopBarCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(children: [
       Container(
-          decoration: BoxDecoration(border: Border.all(color: Colors.white)),
+          // decoration: BoxDecoration(border: Border.all(color: Colors.white)),
           alignment: Alignment.center,
           child: Text(
             content,
