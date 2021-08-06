@@ -16,4 +16,8 @@ class AssetPath {
   static const String iconTicketActive = '$prePath/ticket_active.png';
   static const String iconTicketInactive = '$prePath/ticket_inactive.png';
   static const String iconTopUp = '$prePath/top_up.png';
+
+  static const String iconLogo = '$prePath/logo.png';
+  static const String iconProfile = '$prePath/profile.png';
+
 }

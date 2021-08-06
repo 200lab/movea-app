@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:movea_app/config/themes/app_color.dart';
-import 'modules/common_widget/common_widget_page.dart';
+import 'config/routes/routes.dart';
+import 'config/routes/router.dart' as router;
 
 void main() {
   runApp(MyApp());
@@ -23,11 +24,11 @@ class MyApp extends StatelessWidget {
           scaffoldBackgroundColor: DarkTheme.darkerBackground,
           fontFamily: 'montserrat',
           textTheme: Theme.of(context).textTheme.apply(
-            bodyColor: DarkTheme.white,
-            displayColor: DarkTheme.white
-          )
-      ),
-      home: CommonWidgetPage(),
+                bodyColor: DarkTheme.white,
+                displayColor: DarkTheme.white,
+              )),
+      initialRoute: Routes.onBoardingPage,
+      onGenerateRoute: router.Router.generateRoute,
     );
   }
 }

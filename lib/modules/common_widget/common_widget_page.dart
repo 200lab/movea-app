@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:movea_app/config/themes/app_color.dart';
 import 'package:movea_app/config/themes/text_style.dart';
 import 'package:movea_app/constants/assets_path.dart';
+import 'package:movea_app/widgets/stful/filter_button.dart';
 import 'package:movea_app/widgets/stless/classic_button.dart';
-import 'package:movea_app/widgets/top_bar.dart';
+import 'package:movea_app/widgets/stless/top_bar.dart';
 
 class CommonWidgetPage extends StatelessWidget {
   const CommonWidgetPage({Key? key}) : super(key: key);
@@ -13,15 +13,11 @@ class CommonWidgetPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
     final width = MediaQuery.of(context).size.width;
-    final List<Color> gradientMain = [Color(0xFF3E60F9), Color(0xFF3D54F8)];
-    final List<Color> gradientLightBlue = [
-      Color(0xFF449EFF),
-      Color(0xFF1DC7F7).withOpacity(0.94)
-    ];
-
     return Scaffold(
       body: ListView(
         children: [
+          Text('Stateless',
+              style: TxtStyle.heading1, textAlign: TextAlign.center),
           buildSizedBox(),
           TopBarCard(
             content: 'Create New\nYour Account',
@@ -121,7 +117,30 @@ class CommonWidgetPage extends StatelessWidget {
                 onTap: () {},
               ),
             ],
-          )
+          ),
+          buildSizedBox(),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              FilterButton(
+                height: width/10,
+                width: width/5,
+                content: 'All',
+              ),FilterButton(
+                height: width/10,
+                width: width/5,
+                content: 'All',
+              ),FilterButton(
+                height: width/10,
+                width: width/5,
+                content: 'All',
+              ),FilterButton(
+                height: width/10,
+                width: width/5,
+                content: 'All',
+              ),
+            ],
+          ),
         ],
       ),
     );

@@ -1,119 +1,109 @@
-// import 'package:flutter/material.dart';
-// import 'package:flutter/widgets.dart';
-// import 'package:movea_app/config/themes/app_color.dart';
-// import 'package:movea_app/constants/app_constants.dart';
-// import 'package:movea_app/modules/auth/screens/sign_up_page.dart';
-// import 'package:movea_app/modules/home/screens/home_page.dart';
-// import 'package:movea_app/widgets/bottom_sentence.dart';
-// import 'package:movea_app/widgets/stless/classic_button.dart';
-// import 'package:movea_app/widgets/txt_box.dart';
-//
-// class SignInPage extends StatelessWidget {
-//   const SignInPage({Key? key}) : super(key: key);
-//
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       resizeToAvoidBottomInset: false,
-//       body: Column(
-//         children: [
-//           Expanded(flex: 2, child: Container()),
-//           Expanded(
-//               flex: 3,
-//               child: Container(
-//                 alignment: Alignment.centerLeft,
-//                 child: Image.asset('assets/illustrations/logo.png'),
-//               )),
-//           Expanded(
-//               flex: 4,
-//               child: Container(
-//                 margin: EdgeInsets.only(left: 30),
-//                 alignment: Alignment.centerLeft,
-//                 child: Text('Welcome Back,\nMovie Lover!',
-//                     style: kTextTittleStyle),
-//               )),
-//           Expanded(
-//               flex: 4,
-//               child: Container(
-//                 child: Column(
-//                   children: [
-//                     TxtBox(
-//                       height: MediaQuery.of(context).size.height / 14,
-//                       content: 'Email Address',
-//                     ),
-//                     SizedBox(height: 10),
-//                     TxtBox(
-//                       height: MediaQuery.of(context).size.height / 14,
-//                       content: 'Password',
-//                     ),
-//                   ],
-//                 ),
-//               )),
-//           Expanded(
-//               flex: 1,
-//               child: Container(
-//                 alignment: Alignment.topRight,
-//                 margin: EdgeInsets.only(top: 10, right: 30),
-//                 child: Text(
-//                   'Forget Password?',
-//                   style: kTextFieldStyle,
-//                 ),
-//               )),
-//           ClassicButton(
-//             width: MediaQuery.of(context).size.width * 3 / 5,
-//             height: MediaQuery.of(context).size.height / 14,
-//             radius: 20.0,
-//             color: kColorBlueMain,
-//             child: Text(
-//               'Login',
-//               style: TextStyle(
-//                 fontSize: 20,
-//                 color: kColorWhite,
-//                 fontWeight: FontWeight.w600,
-//               ),
-//             ),
-//             onTap: () {
-//               Navigator.push(
-//                   context, MaterialPageRoute(builder: (_) => HomePage()));
-//             },
-//           ),
-//           Expanded(
-//               flex: 1,
-//               child: BottomSentence(
-//                 content1: 'Create new account?',
-//                 content2: 'Sign Up',
-//                 fnc: () {
-//                   Navigator.push(
-//                       context, MaterialPageRoute(builder: (_) => SignUpPage()));
-//                 },
-//               )),
-//           Expanded(
-//             flex: 3,
-//             child: Row(
-//               mainAxisAlignment: MainAxisAlignment.center,
-//               children: [
-//                 Container(
-//                   height: 75,
-//                   width: 75,
-//                   decoration: BoxDecoration(
-//                       color: kColorDarkBackground,
-//                       borderRadius: BorderRadius.circular(100)),
-//                 ),
-//                 SizedBox(
-//                   width: 30,
-//                 ),
-//                 Container(
-//                   height: 75,
-//                   width: 75,
-//                   decoration: BoxDecoration(
-//                       color: kColorDarkBackground,
-//                       borderRadius: BorderRadius.circular(100)),
-//                 ),
-//               ],
-//             ),
-//           )
-//         ],
-//       ),
-//     );
-//   }
-// }
+import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:movea_app/config/routes/routes.dart';
+import 'package:movea_app/config/themes/app_color.dart';
+import 'package:movea_app/config/themes/text_style.dart';
+import 'package:movea_app/constants/assets_path.dart';
+import 'package:movea_app/widgets/stless/bottom_sentence.dart';
+import 'package:movea_app/widgets/stless/classic_button.dart';
+import 'package:movea_app/widgets/stless/custom_textfiled.dart';
+
+class SignInPage extends StatelessWidget {
+  const SignInPage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    final double height = MediaQuery.of(context).size.height;
+    final double width = MediaQuery.of(context).size.width;
+    return Scaffold(
+      resizeToAvoidBottomInset: false,
+      body: Column(
+        children: [
+          SizedBox(height: height / 10),
+          Container(
+            alignment: Alignment.centerLeft,
+            child: Image.asset(
+              AssetPath.iconLogo,
+              scale: 1.3,
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.only(left: 30),
+            alignment: Alignment.centerLeft,
+            child:
+                Text('Welcome Back,\nMovie Lover!', style: TxtStyle.heading1),
+          ),
+          SizedBox(height: 30),
+          Container(
+            child: Column(
+              children: [
+                CustomTextField(
+                  height: MediaQuery.of(context).size.height / 14,
+                  content: 'Email Address',
+                ),
+                SizedBox(height: 10),
+                CustomTextField(
+                  height: MediaQuery.of(context).size.height / 14,
+                  content: 'Password',
+                ),
+              ],
+            ),
+          ),
+          Container(
+            alignment: Alignment.topRight,
+            margin: EdgeInsets.only(top: 10, right: 30),
+            child: Text(
+              'Forgot Password?',
+              style: TxtStyle.heading4Light,
+            ),
+          ),
+          SizedBox(height: 30),
+          ClassicButton(
+            height: height / 14,
+            width: width * 3 / 5,
+            color: DarkTheme.blueMain,
+            child: Text(
+              'Login',
+              style: TxtStyle.heading3Medium,
+            ),
+            onTap: () {
+              //TODO: go home
+            },
+          ),
+          SizedBox(height: 20),
+
+          BottomSentence(
+            content1: 'Create new account? ',
+            content2: 'Sign Up',
+            fnc: () {
+              Navigator.pushNamed(context, Routes.signUpPage);
+            },
+          ),
+          SizedBox(height: 30),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                height: 75,
+                width: 75,
+                decoration: BoxDecoration(
+                    color: DarkTheme.white,
+                    borderRadius: BorderRadius.circular(100)),
+              ),
+              SizedBox(
+                width: 30,
+              ),
+              Container(
+                height: 75,
+                width: 75,
+                decoration: BoxDecoration(
+                    color: DarkTheme.white,
+                    borderRadius: BorderRadius.circular(100)),
+              ),
+            ],
+          )
+        ],
+      ),
+    );
+  }
+}

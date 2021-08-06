@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:movea_app/config/themes/app_color.dart';
 import 'package:movea_app/config/themes/text_style.dart';
 
 class BottomSentence extends StatelessWidget {
@@ -16,16 +17,16 @@ class BottomSentence extends StatelessWidget {
       children: [
         Text(
           content1,
-          style: TxtStyle.heading4,
+          style: TxtStyle.heading4Light,
         ),
         InkWell(
           onTap: fnc,
-          child: Text(
+          child: GradientText(
             content2,
-            style: TextStyle(
-                fontSize: 16,
-                color: Colors.red,
-                fontWeight: FontWeight.w600),
+            gradient: LinearGradient(colors: <Color>[
+              GradientPalette.gradientLightBlue1,
+              GradientPalette.gradientLightBlue2
+            ]),
           ),
         )
       ],
