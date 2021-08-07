@@ -26,8 +26,8 @@ class _FilterButtonState extends State<FilterButton> {
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
             gradient: LinearGradient(colors: [
-              GradientPalette.gradientLightBlue1,
-              GradientPalette.gradientLightBlue2
+              GradientPalette.lightBlue1,
+              GradientPalette.lightBlue2
             ])),
         child: Text(
           widget.content!,

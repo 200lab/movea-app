@@ -8,5 +8,7 @@ class Routes {
   static final String confirmNewPage = 'ConfirmNewPage';
 
   static final String homePage = 'HomePage';
+  static final String movieInfPage = 'MovieInfoPage';
+
   
 }

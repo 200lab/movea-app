@@ -79,8 +79,8 @@ class _SignUpPageState extends State<SignUpPage> {
                   Navigator.pushNamed(context, Routes.favoriteGenrePage);
                 },
                 height: height / 14,
-                gradientColor1: GradientPalette.gradientBlue1,
-                gradientColor2: GradientPalette.gradientBlue2,
+                gradientColor1: GradientPalette.blue1,
+                gradientColor2: GradientPalette.blue2,
                 child: Text(
                   'Login',
                   style: TxtStyle.heading3Light,

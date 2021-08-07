@@ -3,11 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:movea_app/config/themes/app_color.dart';
 import 'package:movea_app/config/themes/text_style.dart';
-import 'package:movea_app/constants/assets_path.dart';
 import 'package:movea_app/modules/home/models/movie.dart';
 import 'package:movea_app/widgets/stless/circle_avatar.dart';
 import 'package:movea_app/widgets/stless/classic_button.dart';
 import 'package:movea_app/widgets/stless/gerne_bar.dart';
+import 'package:movea_app/widgets/stless/movie_item.dart';
+import 'package:movea_app/widgets/stless/session_title.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -41,22 +42,7 @@ class _HomePageState extends State<HomePage> {
             ],
           ),
           daSpace(),
-          Row(
-            children: [
-              searchFiled(context),
-              SizedBox(
-                width: 15,
-              ),
-              SquareGradientButton(
-                  onTap: () {},
-                  gradientColor1: GradientPalette.gradientBlue1,
-                  gradientColor2: GradientPalette.gradientBlue2,
-                  edge: height / 14,
-                  radidus: 14,
-                  child: ImageIcon(AssetImage(AssetPath.iconControl),
-                      color: DarkTheme.white)),
-            ],
-          ),
+          SessionTitle(content: 'Now Playing'),
           daSpace(),
           GerneBar(
             width: 85,
@@ -72,8 +58,8 @@ class _HomePageState extends State<HomePage> {
               GradientText(
                 'View All',
                 gradient: LinearGradient(colors: <Color>[
-                  GradientPalette.gradientLightBlue1,
-                  GradientPalette.gradientLightBlue2
+                  GradientPalette.lightBlue1,
+                  GradientPalette.lightBlue2
                 ]),
               ),
             ],
@@ -83,15 +69,31 @@ class _HomePageState extends State<HomePage> {
               options: CarouselOptions(autoPlay: true, enlargeCenterPage: true),
               items: movies.map((e) {
                 return Builder(builder: (context) {
-                  return Container(
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(14),
-                          image: DecorationImage(
-                              image: AssetImage(e.backgroundImg),
-                              fit: BoxFit.cover)),
-                      child: Container());
+                  return MovieItem(
+                    movieTitle: e.title,
+                    posterUrl: e.backgroundImg,
+                  );
                 });
               }).toList()),
+          daSpace(),
+          SessionTitle(content: 'Coming Soon'),
+          daSpace(),
+          Row(
+            children: movies.map((e) {
+              return Builder(builder: (context) {
+                return Container(
+                  padding: EdgeInsets.only(left: 10),
+                  width: width/3-10,
+                  child: Image(image: AssetImage(e.posterImg),fit: BoxFit.cover,),
+                );
+              });
+            }).toList(),
+          ),
+          daSpace(),
+          SessionTitle(content: 'Promo'),
+          daSpace(),
+          
+
         ],
       ),
     ));

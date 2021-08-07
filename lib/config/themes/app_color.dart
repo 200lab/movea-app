@@ -12,13 +12,15 @@ class DarkTheme {
   static const darkerBackground = Color(0xff0B0F2F);
   static const veryDark = Color(0xff051138);
   static const red = Color(0xFFFD4C00);
-
+  static const yellow = Color(0xffFFAF34);
   static const text = Colors.white;
 }
 
 class GradientPalette {
-  static const gradientBlue1 = Color(0xFF3E60F9);
-  static const gradientBlue2 = Color(0xFF3D54F8);
-  static const gradientLightBlue1 = Color(0xFF449EFF);
-  static final gradientLightBlue2 = Color(0xFF1DC7F7).withOpacity(0.94);
+  static const blue1 = Color(0xFF3E60F9);
+  static const blue2 = Color(0xFF3D54F8);
+  static const lightBlue1 = Color(0xFF449EFF);
+  static final lightBlue2 = Color(0xFF1DC7F7).withOpacity(0.94);
+  static final black1= Color(0xff111D42).withOpacity(0);
+  static const black2 = Color(0xff111D42);
 }

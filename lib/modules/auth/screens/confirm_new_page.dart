@@ -51,8 +51,8 @@ class _ConfirmNewPageState extends State<ConfirmNewPage> {
               height: height / 12,
             ),
             GradientButton(
-              gradientColor1: GradientPalette.gradientBlue1,
-              gradientColor2: GradientPalette.gradientBlue2,
+              gradientColor1: GradientPalette.blue1,
+              gradientColor2: GradientPalette.blue2,
               height: height / 14,
               width: width * 4 / 5,
               child: Text(

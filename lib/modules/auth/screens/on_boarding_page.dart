@@ -37,8 +37,8 @@ class OnBoardingPage extends StatelessWidget {
                   onTap: () {
                     Navigator.pushNamed(context, Routes.signInPage);
                   },
-                  gradientColor1: GradientPalette.gradientLightBlue1,
-                  gradientColor2: GradientPalette.gradientLightBlue2,
+                  gradientColor1: GradientPalette.lightBlue1,
+                  gradientColor2: GradientPalette.lightBlue2,
                   width: width * 4 / 5,
                   height: height / 14,
                   child: Text(

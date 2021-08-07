@@ -24,8 +24,8 @@ class BottomSentence extends StatelessWidget {
           child: GradientText(
             content2,
             gradient: LinearGradient(colors: <Color>[
-              GradientPalette.gradientLightBlue1,
-              GradientPalette.gradientLightBlue2
+              GradientPalette.lightBlue1,
+              GradientPalette.lightBlue2
             ]),
           ),
         )

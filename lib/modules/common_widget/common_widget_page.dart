@@ -5,7 +5,9 @@ import 'package:movea_app/config/themes/text_style.dart';
 import 'package:movea_app/constants/assets_path.dart';
 import 'package:movea_app/modules/home/models/movie.dart';
 import 'package:movea_app/widgets/stful/filter_button.dart';
+import 'package:movea_app/widgets/stless/card_item.dart';
 import 'package:movea_app/widgets/stless/classic_button.dart';
+import 'package:movea_app/widgets/stless/movie_item.dart';
 import 'package:movea_app/widgets/stless/top_bar.dart';
 
 class CommonWidgetPage extends StatefulWidget {
@@ -51,8 +53,8 @@ class _CommonWidgetPageState extends State<CommonWidgetPage> {
           GradientText(
             'Gradient Text\nHeading 4 size',
             gradient: LinearGradient(colors: <Color>[
-              GradientPalette.gradientLightBlue1,
-              GradientPalette.gradientLightBlue2
+              GradientPalette.lightBlue1,
+              GradientPalette.lightBlue2
             ]),
           ),
           buildSizedBox(),
@@ -68,8 +70,8 @@ class _CommonWidgetPageState extends State<CommonWidgetPage> {
           ),
           buildSizedBox(),
           GradientButton(
-            gradientColor1: GradientPalette.gradientBlue1,
-            gradientColor2: GradientPalette.gradientBlue2,
+            gradientColor1: GradientPalette.blue1,
+            gradientColor2: GradientPalette.blue2,
             height: height / 14,
             child: Text(
               'Gradient Button',
@@ -82,16 +84,16 @@ class _CommonWidgetPageState extends State<CommonWidgetPage> {
             children: [
               SquareGradientButton(
                   onTap: () {},
-                  gradientColor1: GradientPalette.gradientBlue1,
-                  gradientColor2: GradientPalette.gradientBlue2,
+                  gradientColor1: GradientPalette.blue1,
+                  gradientColor2: GradientPalette.blue2,
                   edge: height / 14,
                   radidus: 14,
                   child: ImageIcon(AssetImage(AssetPath.iconControl),
                       color: DarkTheme.white)),
               SquareGradientButton(
                   onTap: () {},
-                  gradientColor1: GradientPalette.gradientLightBlue1,
-                  gradientColor2: GradientPalette.gradientLightBlue2,
+                  gradientColor1: GradientPalette.lightBlue1,
+                  gradientColor2: GradientPalette.lightBlue2,
                   edge: height / 14,
                   radidus: 100,
                   child: ImageIcon(AssetImage(AssetPath.iconTopUp),
@@ -158,17 +160,18 @@ class _CommonWidgetPageState extends State<CommonWidgetPage> {
               options: CarouselOptions(autoPlay: true, enlargeCenterPage: true),
               items: movies.map((e) {
                 return Builder(builder: (context) {
-                  return Container(
-                    height: 40,
-                    color: DarkTheme.blueMain,
-                    child: Image(image: AssetImage(e.backgroundImg),fit: BoxFit.cover,),
-                  );
+                  return MovieItem(movieTitle: e.title, posterUrl: e.backgroundImg,);
                 });
               }).toList()),
+          buildSizedBox(),
+          CardPromo(),
+          buildSizedBox()
         ],
       ),
     );
   }
+
+  
 
   SizedBox buildSizedBox() {
     return SizedBox(height: 30);

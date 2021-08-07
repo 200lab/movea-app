@@ -16,8 +16,16 @@ class AssetPath {
   static const String iconTicketActive = '$prePath/ticket_active.png';
   static const String iconTicketInactive = '$prePath/ticket_inactive.png';
   static const String iconTopUp = '$prePath/top_up.png';
-
   static const String iconLogo = '$prePath/logo.png';
   static const String iconProfile = '$prePath/profile.png';
+  static const String posterDragon = '$prePath/poster_dragon.png';
+  static const String posterOnward = '$prePath/poster_onward.png';
+  static const String posterRalph = '$prePath/poster_ralph.png';
+  static const String posterFrozen = '$prePath/poster_frozen.png';
+  static const String posterScoob = '$prePath/poster_scoob.png';
+  static const String posterSpongebob = '$prePath/poster_spongebob.png';
+  static const String cardPromo = '$prePath/promo.png';
+  static const String teaserRalph = '$prePath/teaser_ralph.png';
+  static const String posterRalphx2 = '$prePath/2x/poster_ralph.png';
 
 }

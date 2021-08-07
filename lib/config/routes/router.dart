@@ -6,6 +6,7 @@ import 'package:movea_app/modules/auth/screens/sign_in_page.dart';
 import 'package:movea_app/modules/auth/screens/sign_up_page.dart';
 import 'package:movea_app/modules/common_widget/common_widget_page.dart';
 import 'package:movea_app/modules/home/screens/home_page.dart';
+import 'package:movea_app/modules/home/screens/movie_info_page.dart';
 
 class Router {
   static Route<dynamic>? generateRoute(RouteSettings settings) {
@@ -38,6 +39,10 @@ class Router {
       case 'HomePage':
         {
           return MaterialPageRoute(builder: (_) => HomePage());
+        }
+      case 'MovieInfoPage':
+        {
+          return MaterialPageRoute(builder: (_) => MovieInfoPage());
         }
       default:
         {
