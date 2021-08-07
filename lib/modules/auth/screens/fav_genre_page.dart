@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:movea_app/config/routes/routes.dart';
 import 'package:movea_app/config/themes/app_color.dart';
 import 'package:movea_app/config/themes/text_style.dart';
 import 'package:movea_app/widgets/stless/classic_button.dart';
@@ -25,6 +26,9 @@ class _FavoriteGenrePageState extends State<FavoriteGenrePage> {
                 height: MediaQuery.of(context).size.height / 14,
                 alignment: Alignment.centerLeft,
                 child: InkWell(
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
                   child: FaIcon(
                     FontAwesomeIcons.arrowLeft,
                     color: DarkTheme.white,
@@ -61,8 +65,7 @@ class _FavoriteGenrePageState extends State<FavoriteGenrePage> {
                   borderRadius: BorderRadius.circular(100)),
               child: InkWell(
                   onTap: () {
-                    // Navigator.push(context,
-                    //     MaterialPageRoute(builder: (_) => ConfirmNewPage()));
+                    Navigator.pushNamed(context, Routes.confirmNewPage);
                   },
                   child: FaIcon(
                     FontAwesomeIcons.arrowRight,

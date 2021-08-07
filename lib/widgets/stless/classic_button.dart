@@ -106,7 +106,8 @@ class CircleButton extends StatelessWidget {
   final Color? bgColor;
   final VoidCallback? onTap;
 
-  const CircleButton({Key? key, this.assetPath, this.bgColor,this.onTap}) : super(key: key);
+  const CircleButton({Key? key, this.assetPath, this.bgColor, this.onTap})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -122,3 +123,6 @@ class CircleButton extends StatelessWidget {
     );
   }
 }
+
+//mainBlueGradient
+

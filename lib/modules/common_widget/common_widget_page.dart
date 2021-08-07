@@ -1,13 +1,22 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:movea_app/config/themes/app_color.dart';
 import 'package:movea_app/config/themes/text_style.dart';
 import 'package:movea_app/constants/assets_path.dart';
+import 'package:movea_app/modules/home/models/movie.dart';
 import 'package:movea_app/widgets/stful/filter_button.dart';
 import 'package:movea_app/widgets/stless/classic_button.dart';
 import 'package:movea_app/widgets/stless/top_bar.dart';
 
-class CommonWidgetPage extends StatelessWidget {
+class CommonWidgetPage extends StatefulWidget {
   const CommonWidgetPage({Key? key}) : super(key: key);
+
+  @override
+  _CommonWidgetPageState createState() => _CommonWidgetPageState();
+}
+
+class _CommonWidgetPageState extends State<CommonWidgetPage> {
+  late PageController _pageController;
 
   @override
   Widget build(BuildContext context) {
@@ -123,32 +132,51 @@ class CommonWidgetPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               FilterButton(
-                height: width/10,
-                width: width/5,
+                height: width / 10,
+                width: width / 5,
                 content: 'All',
-              ),FilterButton(
-                height: width/10,
-                width: width/5,
+              ),
+              FilterButton(
+                height: width / 10,
+                width: width / 5,
                 content: 'All',
-              ),FilterButton(
-                height: width/10,
-                width: width/5,
+              ),
+              FilterButton(
+                height: width / 10,
+                width: width / 5,
                 content: 'All',
-              ),FilterButton(
-                height: width/10,
-                width: width/5,
+              ),
+              FilterButton(
+                height: width / 10,
+                width: width / 5,
                 content: 'All',
               ),
             ],
           ),
+          buildSizedBox(),
+          CarouselSlider(
+              options: CarouselOptions(autoPlay: true, enlargeCenterPage: true),
+              items: movies.map((e) {
+                return Builder(builder: (context) {
+                  return Container(
+                    height: 40,
+                    color: DarkTheme.blueMain,
+                    child: Image(image: AssetImage(e.backgroundImg),fit: BoxFit.cover,),
+                  );
+                });
+              }).toList()),
         ],
       ),
     );
   }
 
   SizedBox buildSizedBox() {
-    return SizedBox(
-      height: 30,
-    );
+    return SizedBox(height: 30);
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _pageController = PageController(initialPage: 1, viewportFraction: 0.8);
   }
 }

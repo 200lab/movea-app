@@ -17,9 +17,9 @@ class SignInPage extends StatelessWidget {
     final double width = MediaQuery.of(context).size.width;
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      body: Column(
+      body: ListView(
         children: [
-          SizedBox(height: height / 10),
+          SizedBox(height: 30),
           Container(
             alignment: Alignment.centerLeft,
             child: Image.asset(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:movea_app/constants/assets_path.dart';
 
 class CustomCircleAvatar extends StatelessWidget {
   final height;
@@ -14,7 +15,7 @@ class CustomCircleAvatar extends StatelessWidget {
         decoration: BoxDecoration(
           image: DecorationImage(
             fit: BoxFit.cover,
-            image: AssetImage('assets/illustrations/photo_profile.png'),
+            image: AssetImage(AssetPath.iconProfile),
           ),
         ),
       ),
