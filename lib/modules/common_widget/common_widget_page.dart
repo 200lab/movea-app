@@ -18,8 +18,6 @@ class CommonWidgetPage extends StatefulWidget {
 }
 
 class _CommonWidgetPageState extends State<CommonWidgetPage> {
-  late PageController _pageController;
-
   @override
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
@@ -160,7 +158,10 @@ class _CommonWidgetPageState extends State<CommonWidgetPage> {
               options: CarouselOptions(autoPlay: true, enlargeCenterPage: true),
               items: movies.map((e) {
                 return Builder(builder: (context) {
-                  return MovieItem(movieTitle: e.title, posterUrl: e.backgroundImg,);
+                  return MovieItem(
+                    movieTitle: e.title,
+                    posterUrl: e.backgroundImg,
+                  );
                 });
               }).toList()),
           buildSizedBox(),
@@ -171,15 +172,7 @@ class _CommonWidgetPageState extends State<CommonWidgetPage> {
     );
   }
 
-  
-
   SizedBox buildSizedBox() {
     return SizedBox(height: 30);
-  }
-
-  @override
-  void initState() {
-    super.initState();
-    _pageController = PageController(initialPage: 1, viewportFraction: 0.8);
   }
 }

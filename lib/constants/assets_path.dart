@@ -1,6 +1,5 @@
 class AssetPath {
   static const String prePath = 'assets/images';
-
   static const String iconAdd = '$prePath/add.png';
   static const String iconBack = '$prePath/back.png';
   static const String iconCancel = '$prePath/cancel.png';
@@ -27,5 +26,17 @@ class AssetPath {
   static const String cardPromo = '$prePath/promo.png';
   static const String teaserRalph = '$prePath/teaser_ralph.png';
   static const String posterRalphx2 = '$prePath/2x/poster_ralph.png';
+  static const String castGalGadot = '$prePath/cast_GalGadot.png';
+  static const String castJackMcBrayer = '$prePath/cast_JackMcBrayer.png';
+  static const String castJohnCReilly = '$prePath/cast_JohnCReilly.png';
+  static const String castSarahSilverman = '$prePath/cast_SarahSilverman.png';
+  static const String castTarajiPHenson = '$prePath/cast_TarajiPHenson.png';
+  static const String backgroundRalph = '$prePath/movie_ralph.png';
+  static const String backgroundOnward = '$prePath/movie_onward.png';
+  static const String backgroundDragon = '$prePath/movie_dragon.png';
+  static const String trailerRalph1 = '$prePath/trailer1.png';
+  static const String trailerRalph2 = '$prePath/trailer2.png';
+  static const String trailerRalph1x2 = '$prePath/2x/trailer1.png';
+  static const String trailerRalph2x2 = '$prePath/2x/trailer2.png';
 
 }

@@ -67,7 +67,7 @@ class SignInPage extends StatelessWidget {
               style: TxtStyle.heading3Medium,
             ),
             onTap: () {
-              //TODO: go home
+              Navigator.pushNamed(context, Routes.homePage);
             },
           ),
           SizedBox(height: 20),

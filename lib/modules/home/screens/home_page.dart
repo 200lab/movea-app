@@ -20,7 +20,6 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    final height = MediaQuery.of(context).size.height;
     final width = MediaQuery.of(context).size.width;
 
     return Scaffold(
@@ -83,8 +82,11 @@ class _HomePageState extends State<HomePage> {
               return Builder(builder: (context) {
                 return Container(
                   padding: EdgeInsets.only(left: 10),
-                  width: width/3-10,
-                  child: Image(image: AssetImage(e.posterImg),fit: BoxFit.cover,),
+                  width: width / 3 - 10,
+                  child: Image(
+                    image: AssetImage(e.posterImg),
+                    fit: BoxFit.cover,
+                  ),
                 );
               });
             }).toList(),
@@ -92,8 +94,6 @@ class _HomePageState extends State<HomePage> {
           daSpace(),
           SessionTitle(content: 'Promo'),
           daSpace(),
-          
-
         ],
       ),
     ));
