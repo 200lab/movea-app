@@ -61,56 +61,7 @@ class MovieInfoPage extends StatelessWidget {
             child: Column(
               children: <Widget>[
                 SizedBox(height: height / 4.5),
-                Row(
-                  children: [
-                    Container(
-                      width: width / 2.5,
-                      child: Image.asset(
-                        AssetPath.posterRalphx2,
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                    Expanded(
-                      child: Container(
-                        height: 220,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: [
-                            Container(
-                              padding: EdgeInsets.only(left: 8),
-                              width: width,
-                              child: Text(
-                                'Ralph Break the Internet',
-                                style: TxtStyle.heading3Medium,
-                              ),
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            StarsBar(),
-                            Container(
-                                padding: EdgeInsets.only(left: 8),
-                                child: Text(
-                                  'Action & adventure, Comedy',
-                                  style: TxtStyle.heading4Light,
-                                )),
-                            SizedBox(
-                              height: 8,
-                            ),
-                            Container(
-                              padding: EdgeInsets.only(left: 8),
-                              width: width,
-                              child: Text(
-                                '1h 41min',
-                                style: TxtStyle.heading4Light,
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                    )
-                  ],
-                ),
+                MovieInfo(width: width),
                 SizedBox(
                   height: 30,
                 ),
@@ -142,12 +93,75 @@ class MovieInfoPage extends StatelessWidget {
                   width: width,
                 ),
                 SessionSingleTitle(width: width, content: 'Trailer and song'),
-                TrailerBar(width:width)
+                TrailerBar(width: width)
               ],
             ),
           )
         ],
       ),
+    );
+  }
+}
+
+class MovieInfo extends StatelessWidget {
+  const MovieInfo({
+    Key? key,
+    required this.width,
+  }) : super(key: key);
+
+  final double width;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        Container(
+          width: width / 2.5,
+          child: Image.asset(
+            AssetPath.posterRalphx2,
+            fit: BoxFit.cover,
+          ),
+        ),
+        Expanded(
+          child: Container(
+            height: 220,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Container(
+                  padding: EdgeInsets.only(left: 8),
+                  width: width,
+                  child: Text(
+                    'Ralph Break the Internet',
+                    style: TxtStyle.heading3Medium,
+                  ),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                StarsBar(),
+                Container(
+                    padding: EdgeInsets.only(left: 8),
+                    child: Text(
+                      'Action & adventure, Comedy',
+                      style: TxtStyle.heading4Light,
+                    )),
+                SizedBox(
+                  height: 8,
+                ),
+                Container(
+                  padding: EdgeInsets.only(left: 8),
+                  width: width,
+                  child: Text(
+                    '1h 41min',
+                    style: TxtStyle.heading4Light,
+                  ),
+                )
+              ],
+            ),
+          ),
+        )
+      ],
     );
   }
 }

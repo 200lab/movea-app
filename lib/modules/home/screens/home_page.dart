@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:movea_app/config/themes/app_color.dart';
 import 'package:movea_app/config/themes/text_style.dart';
+import 'package:movea_app/constants/assets_path.dart';
 import 'package:movea_app/modules/home/models/movie.dart';
+import 'package:movea_app/modules/home/widgets/nav_bar.dart';
 import 'package:movea_app/widgets/stless/circle_avatar.dart';
 import 'package:movea_app/widgets/stless/classic_button.dart';
 import 'package:movea_app/widgets/stless/gerne_bar.dart';
@@ -18,11 +20,13 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
 
     return Scaffold(
+      
         body: SafeArea(
       child: ListView(
         padding: EdgeInsets.symmetric(horizontal: 15, vertical: 20),

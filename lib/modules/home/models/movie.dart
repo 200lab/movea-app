@@ -26,7 +26,12 @@ final List<Movie> movies = [
       posterImg: AssetPath.posterRalph,
       title: 'Wreck It Ralph 2',
       trailerImg: '',
-      casters: [],
+      casters: [
+        Cast(name: 'Reilly', profileImageUrl: AssetPath.castJohnCReilly),
+        Cast(name: 'Silverman', profileImageUrl: AssetPath.castSarahSilverman),
+        Cast(name: 'McBrayer', profileImageUrl: AssetPath.castJackMcBrayer),
+        Cast(name: 'Henson', profileImageUrl: AssetPath.castTarajiPHenson),
+      ],
       trailers: [
         AssetPath.trailerRalph1x2,
         AssetPath.trailerRalph2x2

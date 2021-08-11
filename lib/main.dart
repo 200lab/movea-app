@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
                 bodyColor: DarkTheme.white,
                 displayColor: DarkTheme.white,
               )),
-      initialRoute: Routes.movieInfPage,
+      initialRoute: Routes.rootPage,
       onGenerateRoute: router.Router.generateRoute,
     );
   }

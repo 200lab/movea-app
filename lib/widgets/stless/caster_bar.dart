@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:movea_app/config/themes/text_style.dart';
-import 'package:movea_app/modules/home/models/cast.dart';
+import 'package:movea_app/modules/home/models/movie.dart';
 
 class CatersBar extends StatelessWidget {
   const CatersBar({ Key? key ,required this.width}) : super(key: key);
@@ -11,7 +11,7 @@ class CatersBar extends StatelessWidget {
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: Row(
-        children: caster.map((e){
+        children: movies[0].casters.map((e){
           return Builder(builder: (context) {
             return Column(
               children: [

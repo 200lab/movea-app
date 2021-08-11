@@ -5,8 +5,11 @@ import 'package:movea_app/modules/auth/screens/on_boarding_page.dart';
 import 'package:movea_app/modules/auth/screens/sign_in_page.dart';
 import 'package:movea_app/modules/auth/screens/sign_up_page.dart';
 import 'package:movea_app/modules/common_widget/common_widget_page.dart';
+import 'package:movea_app/modules/home/screens/checkout_movie_page.dart';
 import 'package:movea_app/modules/home/screens/home_page.dart';
 import 'package:movea_app/modules/home/screens/movie_info_page.dart';
+import 'package:movea_app/modules/home/screens/root_page.dart';
+import 'package:movea_app/modules/home/screens/success_checkout_page.dart';
 
 class Router {
   static Route<dynamic>? generateRoute(RouteSettings settings) {
@@ -15,7 +18,6 @@ class Router {
         {
           return MaterialPageRoute(builder: (_) => CommonWidgetPage());
         }
-
       case 'OnBoardingPage':
         {
           return MaterialPageRoute(builder: (_) => OnBoardingPage());
@@ -44,6 +46,24 @@ class Router {
         {
           return MaterialPageRoute(builder: (_) => MovieInfoPage());
         }
+      case 'CheckOutMoviePage':
+        {
+          return MaterialPageRoute(builder: (_) => CheckOutMoviePage());
+        }
+      case 'WalletCheckoutPage':
+        {
+          return MaterialPageRoute(builder: (_) => WalletCheckoutPage());
+        }case 'WalletCheckoutPage':
+        {
+          return MaterialPageRoute(builder: (_) => WalletCheckoutPage());
+        }
+
+
+      case 'RootPage':
+        {
+          return MaterialPageRoute(builder: (_) => RootPage());
+        }
+
       default:
         {
           return MaterialPageRoute(

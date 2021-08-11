@@ -1,4 +1,6 @@
 class Routes {
+  static final String rootPage = 'RootPage';
+  
   static final String commonWidgetPage = 'CommonWidgetPage';
 
   static final String onBoardingPage = 'OnBoardingPage';
@@ -9,6 +11,9 @@ class Routes {
 
   static final String homePage = 'HomePage';
   static final String movieInfPage = 'MovieInfoPage';
+  static final String checkOutMoviePage = 'CheckOutMoviePage';
+  static final String walletCheckoutPage = 'WalletCheckoutPage';
+
 
   
 }
