@@ -50,4 +50,18 @@ final List<Movie> movies = [
       trailerImg: '',
       casters: [],
       trailers: []),
+  Movie(
+      backgroundImg: 'assets/images/movie_dragon.png',
+      posterImg: AssetPath.posterDragon,
+      title: 'How To Train Your Dargon',
+      trailerImg: '',
+      casters: [],
+      trailers: []),
+  Movie(
+      backgroundImg: 'assets/images/movie_dragon.png',
+      posterImg: AssetPath.posterDragon,
+      title: 'How To Train Your Dargon',
+      trailerImg: '',
+      casters: [],
+      trailers: []),
 ];

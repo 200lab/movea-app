@@ -7,6 +7,7 @@ class DarkTheme {
   static const darkBlueIllustration = Color(0xff1E3577);
   static const white = Color(0xffFFFFFF);
   static const grey = Color(0xffABADBD);
+  static const greyBackground = Color(0xff42476A);
   static const darkGrey = Color(0xff42476A);
   static const darkBackground = Color(0xff151D3B);
   static const darkerBackground = Color(0xff0B0F2F);

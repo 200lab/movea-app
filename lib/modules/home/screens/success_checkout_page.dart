@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:movea_app/config/themes/app_color.dart';
 import 'package:movea_app/config/themes/text_style.dart';
-import 'package:movea_app/constants/assets_path.dart';
 import 'package:movea_app/modules/home/screens/home_page.dart';
 import 'package:movea_app/widgets/stless/bottom_sentence.dart';
 import 'package:movea_app/widgets/stless/classic_button.dart';

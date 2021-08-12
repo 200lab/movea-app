@@ -11,9 +11,7 @@ class Routes {
 
   static final String homePage = 'HomePage';
   static final String movieInfPage = 'MovieInfoPage';
+  static final String selectCinemaPage = 'SelectCinemaPage';
   static final String checkOutMoviePage = 'CheckOutMoviePage';
   static final String walletCheckoutPage = 'WalletCheckoutPage';
-
-
-  
 }

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:movea_app/constants/assets_path.dart';
 
 class CardPromo extends StatelessWidget {
   const CardPromo({Key? key}) : super(key: key);
@@ -10,7 +9,7 @@ class CardPromo extends StatelessWidget {
       height: 100,
       decoration: BoxDecoration(
         // color: Colors.red,
-        image: DecorationImage(image: AssetImage(AssetPath.cardPromo),fit: BoxFit.cover),
+        // image: DecorationImage(image: AssetImage(AssetPath.cardPromo),fit: BoxFit.cover),
       ),
     );
   }

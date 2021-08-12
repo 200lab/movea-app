@@ -38,5 +38,4 @@ class AssetPath {
   static const String trailerRalph2 = '$prePath/trailer2.png';
   static const String trailerRalph1x2 = '$prePath/2x/trailer1.png';
   static const String trailerRalph2x2 = '$prePath/2x/trailer2.png';
-
 }

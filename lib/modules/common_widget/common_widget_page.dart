@@ -5,6 +5,8 @@ import 'package:movea_app/config/themes/text_style.dart';
 import 'package:movea_app/constants/assets_path.dart';
 import 'package:movea_app/modules/home/models/movie.dart';
 import 'package:movea_app/widgets/stful/filter_button.dart';
+import 'package:movea_app/widgets/stful/date_button.dart';
+import 'package:movea_app/widgets/stful/time_button.dart';
 import 'package:movea_app/widgets/stless/card_item.dart';
 import 'package:movea_app/widgets/stless/classic_button.dart';
 import 'package:movea_app/widgets/stless/movie_item.dart';
@@ -159,14 +161,80 @@ class _CommonWidgetPageState extends State<CommonWidgetPage> {
               items: movies.map((e) {
                 return Builder(builder: (context) {
                   return MovieItem(
+                    onTap: () {},
                     movieTitle: e.title,
                     posterUrl: e.backgroundImg,
                   );
                 });
               }).toList()),
           buildSizedBox(),
-          CardPromo(),
-          buildSizedBox()
+          CardPromo(), //Error Export
+          buildSizedBox(),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                DateButton(
+                    height: height,
+                    width: width,
+                    weekday: 'SAT',
+                    day: '21',
+                    ticketState: TicketStates.Idle),
+                DateButton(
+                    height: height,
+                    width: width,
+                    weekday: 'SAT',
+                    day: '21',
+                    ticketState: TicketStates.Idle),
+                DateButton(
+                    height: height,
+                    width: width,
+                    weekday: 'SAT',
+                    day: '21',
+                    ticketState: TicketStates.Idle),
+                DateButton(
+                    height: height,
+                    width: width,
+                    weekday: 'SAT',
+                    day: '21',
+                    ticketState: TicketStates.Idle),
+              ],
+            ),
+          ),
+          buildSizedBox(),
+          Padding(
+            padding: const EdgeInsets.only(left: 20),
+            child: SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  TimeButton(
+                    height: height,
+                    width: width,
+                    time: '12 : 20',
+                    ticketState: TicketStates.Busy,
+                  ),
+                  TimeButton(
+                    height: height,
+                    width: width,
+                    time: '14 : 30',
+                    ticketState: TicketStates.Idle,
+                  ),TimeButton(
+                    height: height,
+                    width: width,
+                    time: '16 : 40',
+                    ticketState: TicketStates.Busy,
+                  ),TimeButton(
+                    height: height,
+                    width: width,
+                    time: '19 : 00',
+                    ticketState: TicketStates.Busy,
+                  )
+                ],
+              ),
+            ),
+          )
         ],
       ),
     );

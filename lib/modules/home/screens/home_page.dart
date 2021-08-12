@@ -3,9 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:movea_app/config/themes/app_color.dart';
 import 'package:movea_app/config/themes/text_style.dart';
-import 'package:movea_app/constants/assets_path.dart';
 import 'package:movea_app/modules/home/models/movie.dart';
-import 'package:movea_app/modules/home/widgets/nav_bar.dart';
 import 'package:movea_app/widgets/stless/circle_avatar.dart';
 import 'package:movea_app/widgets/stless/classic_button.dart';
 import 'package:movea_app/widgets/stless/gerne_bar.dart';
@@ -70,11 +68,12 @@ class _HomePageState extends State<HomePage> {
           daSpace(),
           CarouselSlider(
               options: CarouselOptions(autoPlay: true, enlargeCenterPage: true),
-              items: movies.map((e) {
+              items: movies.sublist(0,3).map((e) {
                 return Builder(builder: (context) {
                   return MovieItem(
                     movieTitle: e.title,
                     posterUrl: e.backgroundImg,
+                    onTap: (){},
                   );
                 });
               }).toList()),
@@ -82,7 +81,7 @@ class _HomePageState extends State<HomePage> {
           SessionTitle(content: 'Coming Soon'),
           daSpace(),
           Row(
-            children: movies.map((e) {
+            children: movies.sublist(0,3).map((e) {
               return Builder(builder: (context) {
                 return Container(
                   padding: EdgeInsets.only(left: 10),
