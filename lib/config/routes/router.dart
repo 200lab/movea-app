@@ -11,6 +11,7 @@ import 'package:movea_app/modules/home/screens/movie_info_page.dart';
 import 'package:movea_app/modules/home/screens/root_page.dart';
 import 'package:movea_app/modules/home/screens/select_cinema_page.dart';
 import 'package:movea_app/modules/home/screens/success_checkout_page.dart';
+import 'package:movea_app/modules/wallet/top_up_page.dart';
 
 class Router {
   static Route<dynamic>? generateRoute(RouteSettings settings) {
@@ -46,7 +47,8 @@ class Router {
       case 'MovieInfoPage':
         {
           return MaterialPageRoute(builder: (_) => MovieInfoPage());
-        }case 'SelectCinemaPage':
+        }
+      case 'SelectCinemaPage':
         {
           return MaterialPageRoute(builder: (_) => SelectCinemaPage());
         }
@@ -57,11 +59,15 @@ class Router {
       case 'WalletCheckoutPage':
         {
           return MaterialPageRoute(builder: (_) => WalletCheckoutPage());
-        }case 'WalletCheckoutPage':
+        }
+      case 'WalletCheckoutPage':
         {
           return MaterialPageRoute(builder: (_) => WalletCheckoutPage());
         }
-
+      case 'TopUpPage':
+        {
+          return MaterialPageRoute(builder: (_) => TopUpPage());
+        }
 
       case 'RootPage':
         {

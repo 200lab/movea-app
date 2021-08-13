@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:movea_app/config/themes/text_style.dart';
-import 'package:movea_app/modules/home/models/movie.dart';
+import 'package:movea_app/models/movie.dart';
 
 class CatersBar extends StatelessWidget {
   const CatersBar({ Key? key ,required this.width}) : super(key: key);

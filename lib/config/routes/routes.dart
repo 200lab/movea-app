@@ -14,4 +14,5 @@ class Routes {
   static final String selectCinemaPage = 'SelectCinemaPage';
   static final String checkOutMoviePage = 'CheckOutMoviePage';
   static final String walletCheckoutPage = 'WalletCheckoutPage';
+  static final String topUpPage = 'TopUpPage';
 }

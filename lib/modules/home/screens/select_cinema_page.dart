@@ -55,14 +55,7 @@ class SelectCinemaPage extends StatelessWidget {
             SizedBox(
               height: 10,
             ),
-            Container(
-              width: width,
-              padding: EdgeInsets.symmetric(horizontal: 20),
-              child: Text(
-                'Choose Date',
-                style: TxtStyle.heading2,
-              ),
-            ),
+            titleBar(width,'Choose Date'),
             SizedBox(
               height: 10,
             ),
@@ -104,46 +97,25 @@ class SelectCinemaPage extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 10,
+              height: 15,
             ),
-            Container(
-              width: width,
-              padding: EdgeInsets.symmetric(horizontal: 20),
-              child: Text(
-                'Central Park CGV',
-                style: TxtStyle.heading2,
-              ),
-            ),
+            titleBar(width, 'Central Park CGV'),
             SizedBox(
               height: 10,
             ),
             TimeBar(height: height, width: width),
             SizedBox(
-              height: 10,
+              height: 15,
             ),
-            Container(
-              width: width,
-              padding: EdgeInsets.symmetric(horizontal: 20),
-              child: Text(
-                'FX Sudirman XXI',
-                style: TxtStyle.heading2,
-              ),
-            ),
+            titleBar(width, 'FX Sudirman XXI'),
             SizedBox(
               height: 10,
             ),
             TimeBar(height: height, width: width),
             SizedBox(
-              height: 10,
+              height: 15,
             ),
-            Container(
-              width: width,
-              padding: EdgeInsets.symmetric(horizontal: 20),
-              child: Text(
-                'Kelapa Gading IMAX',
-                style: TxtStyle.heading2,
-              ),
-            ),
+            titleBar(width, 'Kelapa Gading IMAX'),
             SizedBox(
               height: 10,
             ),
@@ -163,5 +135,16 @@ class SelectCinemaPage extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  Container titleBar(double width,String content) {
+    return Container(
+            width: width,
+            padding: EdgeInsets.symmetric(horizontal: 20),
+            child: Text(
+              content,
+              style: TxtStyle.heading2,
+            ),
+          );
   }
 }

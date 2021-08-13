@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:movea_app/config/themes/app_color.dart';
 import 'package:movea_app/constants/assets_path.dart';
-import 'package:movea_app/modules/home/models/movie.dart';
+import 'package:movea_app/models/movie.dart';
 
 class TrailerBar extends StatelessWidget {
   const TrailerBar({Key? key, required this.width}) : super(key: key);

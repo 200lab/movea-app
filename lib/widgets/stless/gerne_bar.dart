@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:movea_app/modules/home/models/movie.dart';
+import 'package:movea_app/models/movie.dart';
 import 'package:movea_app/widgets/stful/filter_button.dart';
 
 class GerneBar extends StatelessWidget {

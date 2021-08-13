@@ -23,9 +23,9 @@ class AssetPath {
   static const String posterFrozen = '$prePath/poster_frozen.png';
   static const String posterScoob = '$prePath/poster_scoob.png';
   static const String posterSpongebob = '$prePath/poster_spongebob.png';
+  static const String posterTopUp = '$prePath/topup.png';
   static const String cardPromo = '$prePath/promo.png';
   static const String teaserRalph = '$prePath/teaser_ralph.png';
-  static const String posterRalphx2 = '$prePath/2x/poster_ralph.png';
   static const String castGalGadot = '$prePath/cast_GalGadot.png';
   static const String castJackMcBrayer = '$prePath/cast_JackMcBrayer.png';
   static const String castJohnCReilly = '$prePath/cast_JohnCReilly.png';
@@ -36,6 +36,14 @@ class AssetPath {
   static const String backgroundDragon = '$prePath/movie_dragon.png';
   static const String trailerRalph1 = '$prePath/trailer1.png';
   static const String trailerRalph2 = '$prePath/trailer2.png';
+
+  static const String posterTopUpx2 = '$prePath/2x/topup.png';
+  static const String posterRalphx2 = '$prePath/2x/poster_ralph.png';
+  static const String posterDragonx2 = '$prePath/2x/poster_dragon.png';
+  static const String posterFrozenx2 = '$prePath/2x/poster_frozen.png';
+  static const String posterOnwardx2 = '$prePath/2x/poster_onward.png';
+  static const String posterScoobx2 = '$prePath/2x/poster_scoob.png';
+  static const String posterSpongebobx2 = '$prePath/2x/poster_spongebob.png';
   static const String trailerRalph1x2 = '$prePath/2x/trailer1.png';
   static const String trailerRalph2x2 = '$prePath/2x/trailer2.png';
 }
