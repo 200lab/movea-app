@@ -8,10 +8,12 @@ import 'package:movea_app/modules/common_widget/common_widget_page.dart';
 import 'package:movea_app/modules/home/screens/checkout_movie_page.dart';
 import 'package:movea_app/modules/home/screens/home_page.dart';
 import 'package:movea_app/modules/home/screens/movie_info_page.dart';
-import 'package:movea_app/modules/home/screens/root_page.dart';
+import 'package:movea_app/modules/ticket/ticket_detail_page.dart';
+import 'package:movea_app/root_page.dart';
 import 'package:movea_app/modules/home/screens/select_cinema_page.dart';
-import 'package:movea_app/modules/home/screens/success_checkout_page.dart';
-import 'package:movea_app/modules/wallet/top_up_page.dart';
+import 'package:movea_app/modules/ticket/my_ticket_page.dart';
+import 'package:movea_app/modules/wallet/screens/my_wallet_page.dart';
+import 'package:movea_app/modules/wallet/screens/top_up_page.dart';
 
 class Router {
   static Route<dynamic>? generateRoute(RouteSettings settings) {
@@ -56,13 +58,17 @@ class Router {
         {
           return MaterialPageRoute(builder: (_) => CheckOutMoviePage());
         }
-      case 'WalletCheckoutPage':
+      case 'MyTicketPage':
         {
-          return MaterialPageRoute(builder: (_) => WalletCheckoutPage());
+          return MaterialPageRoute(builder: (_) => MyTicketPage());
         }
-      case 'WalletCheckoutPage':
+      case 'TicketDetailPage':
         {
-          return MaterialPageRoute(builder: (_) => WalletCheckoutPage());
+          return MaterialPageRoute(builder: (_) => TicketDetailPage());
+        }
+      case 'MyWalletPage':
+        {
+          return MaterialPageRoute(builder: (_) => MyWalletPage());
         }
       case 'TopUpPage':
         {

@@ -3,7 +3,7 @@ import 'package:movea_app/config/themes/app_color.dart';
 import 'package:movea_app/constants/assets_path.dart';
 import 'package:movea_app/modules/home/screens/home_page.dart';
 import 'package:movea_app/modules/ticket/my_ticket_page.dart';
-import 'package:movea_app/modules/wallet/my_wallet_page.dart';
+import 'package:movea_app/modules/wallet/screens/my_wallet_page.dart';
 
 class RootPage extends StatefulWidget {
   const RootPage({Key? key}) : super(key: key);

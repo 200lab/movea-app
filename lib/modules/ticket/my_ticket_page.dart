@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:movea_app/config/themes/app_color.dart';
 import 'package:movea_app/config/themes/text_style.dart';
 import 'package:movea_app/models/movie.dart';
+import 'package:movea_app/widgets/stless/movie_card.dart';
 
 class MyTicketPage extends StatefulWidget {
   const MyTicketPage({Key? key}) : super(key: key);
@@ -11,6 +12,7 @@ class MyTicketPage extends StatefulWidget {
 }
 
 class _MyTicketPageState extends State<MyTicketPage> {
+  final bool hasStar = false;
   @override
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
@@ -99,46 +101,12 @@ class _MyTicketPageState extends State<MyTicketPage> {
                 padding: EdgeInsets.symmetric(horizontal: 20),
                 children: movies
                     .map((e) => Builder(builder: (context) {
-                          return Padding(
-                            padding: const EdgeInsets.symmetric(vertical: 5),
-                            child: Row(
-                              children: [
-                                Container(
-                                  height: height / 6,
-                                  width: width / 4,
-                                  decoration: BoxDecoration(
-                                      image: DecorationImage(
-                                          image: AssetImage(e.posterImg))),
-                                ),
-                                Container(
-                                  width: width / 1.75,
-                                  height: height / 6,
-                                  margin: EdgeInsets.only(
-                                      left: 20, top: 8, bottom: 8),
-                                  child: Column(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceEvenly,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        e.title,
-                                        style: TxtStyle.heading3Medium,
-                                      ),
-                                      Text(
-                                        '16:40, Sun May 22',
-                                        style: TxtStyle.heading4Light,
-                                      ),
-                                      Text(
-                                        'FX Sudirman XXI',
-                                        style: TxtStyle.heading4Light,
-                                      )
-                                    ],
-                                  ),
-                                )
-                              ],
-                            ),
-                          );
+                          return MovieCard(
+                              context: context,
+                              hasStar: hasStar,
+                              height: height,
+                              width: width,
+                              e: e);
                         }))
                     .toList(),
               ),

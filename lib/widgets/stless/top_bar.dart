@@ -12,15 +12,16 @@ class TopBarCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(children: [
       Container(
-          // decoration: BoxDecoration(border: Border.all(color: Colors.white)),
-          alignment: Alignment.center,
-          child: Text(
-            content,
-            textAlign: TextAlign.center,
-            style: TxtStyle.heading1,
+        height: 48,
+          child: Center(
+            child: Text(
+              content,
+              textAlign: TextAlign.center,
+              style: TxtStyle.heading1,
+            ),
           )),
       Container(
-        margin: EdgeInsets.only(left: 10, top: 5),
+        margin: EdgeInsets.only(left: 10),
         child: IconButton(
           onPressed: () {
             Navigator.pop(context);

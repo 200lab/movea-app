@@ -139,7 +139,9 @@ class MovieInfo extends StatelessWidget {
                 SizedBox(
                   height: 10,
                 ),
-                StarsBar(),
+                Padding(
+                  padding: EdgeInsets.only(left: 10,bottom: 5),
+                  child: StarsBar()),
                 Container(
                     padding: EdgeInsets.only(left: 8),
                     child: Text(

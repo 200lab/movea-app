@@ -22,7 +22,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
-    final height = MediaQuery.of(context).size.height;
+    // final height = MediaQuery.of(context).size.height;
 
     return Scaffold(
         body: SafeArea(
@@ -85,12 +85,17 @@ class _HomePageState extends State<HomePage> {
           Row(
             children: movies.sublist(0, 3).map((e) {
               return Builder(builder: (context) {
-                return Container(
-                  padding: EdgeInsets.only(left: 10),
-                  width: width / 3 - 10,
-                  child: Image(
-                    image: AssetImage(e.posterImg),
-                    fit: BoxFit.cover,
+                return GestureDetector(
+                  onTap: () {
+                    Navigator.pushNamed(context, Routes.movieInfPage);
+                  },
+                  child: Container(
+                    padding: EdgeInsets.only(left: 10),
+                    width: width / 3 - 10,
+                    child: Image(
+                      image: AssetImage(e.posterImg),
+                      fit: BoxFit.cover,
+                    ),
                   ),
                 );
               });

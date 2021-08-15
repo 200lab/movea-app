@@ -9,7 +9,7 @@ class StarsBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.only(left: 10, bottom: 20),
+      // padding: const EdgeInsets.only(left: 10, bottom: 20),
       child: Row(
         children: [
           star(),
@@ -31,7 +31,7 @@ class StarsBar extends StatelessWidget {
       padding: const EdgeInsets.only(right: 4),
       child: FaIcon(
         FontAwesomeIcons.solidStar,
-        size: 15,
+        size: 10,
         color: DarkTheme.yellow,
       ),
     );

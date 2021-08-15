@@ -3,6 +3,7 @@ import 'package:movea_app/config/routes/routes.dart';
 import 'package:movea_app/config/themes/app_color.dart';
 import 'package:movea_app/config/themes/text_style.dart';
 import 'package:movea_app/modules/home/screens/movie_info_page.dart';
+import 'package:movea_app/modules/home/screens/success_checkout_page.dart';
 import 'package:movea_app/widgets/stless/classic_button.dart';
 import 'package:movea_app/widgets/stless/top_bar.dart';
 
@@ -43,11 +44,25 @@ class CheckOutMoviePage extends StatelessWidget {
             GradientButton(
               gradientColor1: GradientPalette.blue1,
               gradientColor2: GradientPalette.blue2,
-              width: width*4/5,
-              height: height/14,
-              child: Text('Checkout',style: TxtStyle.heading3,),
-              onTap: (){
-                Navigator.pushNamed(context, Routes.walletCheckoutPage);
+              width: width * 4 / 5,
+              height: height / 14,
+              child: Text(
+                'Checkout',
+                style: TxtStyle.heading3,
+              ),
+              onTap: () {
+                // Navigator.pushNamed(context, Routes.successCheckoutPage);
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return SuccessCheckoutPage(
+                    contentMain: 'Happy Watching!',
+                    contentDescription:
+                        'You have successfully\nbought the ticket',
+                    contentButton: 'My Ticket',
+                    onTap: () {
+                      Navigator.pushNamed(context, Routes.rootPage);
+                    },
+                  );
+                }));
               },
             )
           ],
