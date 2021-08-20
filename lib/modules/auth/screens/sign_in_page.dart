@@ -13,8 +13,7 @@ class SignInPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final double height = MediaQuery.of(context).size.height;
-    final double width = MediaQuery.of(context).size.width;
+    final Size size = MediaQuery.of(context).size;
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: ListView(
@@ -58,17 +57,19 @@ class SignInPage extends StatelessWidget {
             ),
           ),
           SizedBox(height: 30),
-          ClassicButton(
-            height: height / 14,
-            width: width * 3 / 5,
-            color: DarkTheme.blueMain,
-            child: Text(
-              'Login',
-              style: TxtStyle.heading3Medium,
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 30),
+            child: ClassicButton(
+              height: size.height / 14,
+              color: DarkTheme.blueMain,
+              child: Text(
+                'Login',
+                style: TxtStyle.heading3Medium,
+              ),
+              onTap: () {
+                Navigator.pushNamed(context, Routes.homePage);
+              },
             ),
-            onTap: () {
-              Navigator.pushNamed(context, Routes.homePage);
-            },
           ),
           SizedBox(height: 20),
 

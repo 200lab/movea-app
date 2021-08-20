@@ -22,8 +22,7 @@ class CommonWidgetPage extends StatefulWidget {
 class _CommonWidgetPageState extends State<CommonWidgetPage> {
   @override
   Widget build(BuildContext context) {
-    final height = MediaQuery.of(context).size.height;
-    final width = MediaQuery.of(context).size.width;
+    final Size size = MediaQuery.of(context).size;
     return Scaffold(
       body: ListView(
         children: [
@@ -32,6 +31,7 @@ class _CommonWidgetPageState extends State<CommonWidgetPage> {
           buildSizedBox(),
           TopBarCard(
             content: 'Create New\nYour Account',
+            height: 96,
           ),
           buildSizedBox(),
           Text(
@@ -59,8 +59,8 @@ class _CommonWidgetPageState extends State<CommonWidgetPage> {
           ),
           buildSizedBox(),
           ClassicButton(
-            height: height / 14,
-            width: width * 4 / 5,
+            height: size.height / 14,
+            width: size.width * 4 / 5,
             color: DarkTheme.blueMain,
             child: Text(
               'Classic Button',
@@ -72,7 +72,7 @@ class _CommonWidgetPageState extends State<CommonWidgetPage> {
           GradientButton(
             gradientColor1: GradientPalette.blue1,
             gradientColor2: GradientPalette.blue2,
-            height: height / 14,
+            height: size.height / 14,
             child: Text(
               'Gradient Button',
               style: TxtStyle.heading3,
@@ -86,7 +86,7 @@ class _CommonWidgetPageState extends State<CommonWidgetPage> {
                   onTap: () {},
                   gradientColor1: GradientPalette.blue1,
                   gradientColor2: GradientPalette.blue2,
-                  edge: height / 14,
+                  edge: size.height / 14,
                   radidus: 14,
                   child: ImageIcon(AssetImage(AssetPath.iconControl),
                       color: DarkTheme.white)),
@@ -94,15 +94,15 @@ class _CommonWidgetPageState extends State<CommonWidgetPage> {
                   onTap: () {},
                   gradientColor1: GradientPalette.lightBlue1,
                   gradientColor2: GradientPalette.lightBlue2,
-                  edge: height / 14,
+                  edge: size.height / 14,
                   radidus: 100,
                   child: ImageIcon(AssetImage(AssetPath.iconTopUp),
                       color: DarkTheme.white)),
               GestureDetector(
                 onTap: () {},
                 child: Container(
-                  width: width / 10,
-                  height: width / 10,
+                  width: size.width / 10,
+                  height: size.width / 10,
                   decoration: BoxDecoration(
                       color: DarkTheme.blueMain, shape: BoxShape.circle),
                   child: ImageIcon(
@@ -130,31 +130,31 @@ class _CommonWidgetPageState extends State<CommonWidgetPage> {
             ],
           ),
           buildSizedBox(),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              FilterButton(
-                height: width / 10,
-                width: width / 5,
-                content: 'All',
-              ),
-              FilterButton(
-                height: width / 10,
-                width: width / 5,
-                content: 'All',
-              ),
-              FilterButton(
-                height: width / 10,
-                width: width / 5,
-                content: 'All',
-              ),
-              FilterButton(
-                height: width / 10,
-                width: width / 5,
-                content: 'All',
-              ),
-            ],
-          ),
+          // Row(
+          //   mainAxisAlignment: MainAxisAlignment.spaceAround,
+          //   children: [
+          //     FilterButton(
+          //       height: size.width / 10,
+          //       width: size.width / 5,
+          //       content: 'All',
+          //     ),
+          //     FilterButton(
+          //       height: size.width / 10,
+          //       width: size.width / 5,
+          //       content: 'All',
+          //     ),
+          //     FilterButton(
+          //       height: size.width / 10,
+          //       width: size.width / 5,
+          //       content: 'All',
+          //     ),
+          //     FilterButton(
+          //       height: size.width / 10,
+          //       width: size.width / 5,
+          //       content: 'All',
+          //     ),
+          //   ],
+          // ),
           buildSizedBox(),
           CarouselSlider(
               options: CarouselOptions(autoPlay: true, enlargeCenterPage: true),
@@ -176,26 +176,26 @@ class _CommonWidgetPageState extends State<CommonWidgetPage> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 DateButton(
-                    height: height,
-                    width: width,
+                    height: size.height,
+                    width: size.width,
                     weekday: 'SAT',
                     day: '21',
                     ticketState: TicketStates.Idle),
                 DateButton(
-                    height: height,
-                    width: width,
+                    height: size.height,
+                    width: size.width,
                     weekday: 'SAT',
                     day: '21',
                     ticketState: TicketStates.Idle),
                 DateButton(
-                    height: height,
-                    width: width,
+                    height: size.height,
+                    width: size.width,
                     weekday: 'SAT',
                     day: '21',
                     ticketState: TicketStates.Idle),
                 DateButton(
-                    height: height,
-                    width: width,
+                    height: size.height,
+                    width: size.width,
                     weekday: 'SAT',
                     day: '21',
                     ticketState: TicketStates.Idle),
@@ -210,31 +210,34 @@ class _CommonWidgetPageState extends State<CommonWidgetPage> {
               child: Row(
                 children: [
                   TimeButton(
-                    height: height,
-                    width: width,
+                    height: size.height,
+                    width: size.width,
                     time: '12 : 20',
                     ticketState: TicketStates.Busy,
                   ),
                   TimeButton(
-                    height: height,
-                    width: width,
+                    height: size.height,
+                    width: size.width,
                     time: '14 : 30',
                     ticketState: TicketStates.Idle,
-                  ),TimeButton(
-                    height: height,
-                    width: width,
+                  ),
+                  TimeButton(
+                    height: size.height,
+                    width: size.width,
                     time: '16 : 40',
                     ticketState: TicketStates.Busy,
-                  ),TimeButton(
-                    height: height,
-                    width: width,
+                  ),
+                  TimeButton(
+                    height: size.height,
+                    width: size.width,
                     time: '19 : 00',
                     ticketState: TicketStates.Busy,
                   )
                 ],
               ),
             ),
-          )
+          ),
+          buildSizedBox(),
         ],
       ),
     );

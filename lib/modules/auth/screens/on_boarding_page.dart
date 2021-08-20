@@ -10,8 +10,7 @@ class OnBoardingPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final height = MediaQuery.of(context).size.height;
-    final width = MediaQuery.of(context).size.width;
+    final Size size = MediaQuery.of(context).size;
     return Scaffold(
       body: Center(
         child: Column(
@@ -39,8 +38,8 @@ class OnBoardingPage extends StatelessWidget {
                   },
                   gradientColor1: GradientPalette.lightBlue1,
                   gradientColor2: GradientPalette.lightBlue2,
-                  width: width * 4 / 5,
-                  height: height / 14,
+                  width: size.width * 4 / 5,
+                  height: size.height / 14,
                   child: Text(
                     'Get Started',
                     style: TxtStyle.heading3Medium,

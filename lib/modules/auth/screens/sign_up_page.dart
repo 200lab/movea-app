@@ -17,17 +17,16 @@ class SignUpPage extends StatefulWidget {
 class _SignUpPageState extends State<SignUpPage> {
   @override
   Widget build(BuildContext context) {
-    final height = MediaQuery.of(context).size.height;
-    // final width = MediaQuery.of(context).size.width;
+    final Size size = MediaQuery.of(context).size;
     return Scaffold(
       body: SafeArea(
         child: ListView(
           children: [
-            TopBarCard(content: 'Create New\nYour Account'),
+            TopBarCard(content: 'Create New\nYour Account',height: 100,),
             SizedBox(height: 30),
             Container(
-              width: height / 8,
-              height: height / 8,
+              width: size.height / 8,
+              height: size.height / 8,
               decoration: BoxDecoration(
                 image: DecorationImage(
                   //fit: BoxFit.cover,
@@ -78,7 +77,7 @@ class _SignUpPageState extends State<SignUpPage> {
                 onTap: (){
                   Navigator.pushNamed(context, Routes.favoriteGenrePage);
                 },
-                height: height / 14,
+                height: size.height / 14,
                 gradientColor1: GradientPalette.blue1,
                 gradientColor2: GradientPalette.blue2,
                 child: Text(

@@ -18,7 +18,7 @@ class Movie {
       required this.trailers});
 }
 
-final List<String> genres = ['All', 'Action', 'Drama', 'Honor'];
+final List<String> genres = ['All', 'Action', 'Drama', 'Honor','Romance','Fantasy'];
 
 final List<Movie> movies = [
   Movie(

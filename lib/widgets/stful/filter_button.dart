@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 import 'package:movea_app/config/themes/app_color.dart';
 import 'package:movea_app/config/themes/text_style.dart';
@@ -6,8 +8,9 @@ class FilterButton extends StatefulWidget {
   final double? height;
   final double? width;
   final String? content;
+  final VoidCallback onTap;
 
-  const FilterButton({Key? key, this.height, this.width, this.content})
+  const FilterButton({Key? key, this.height, this.width, this.content,required this.onTap})
       : super(key: key);
 
   @override
@@ -18,7 +21,7 @@ class _FilterButtonState extends State<FilterButton> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: widget.onTap,
       child: Container(
         alignment: Alignment.center,
         height: widget.height,

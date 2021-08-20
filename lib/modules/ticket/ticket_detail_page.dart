@@ -9,19 +9,22 @@ class TicketDetailPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final height = MediaQuery.of(context).size.height;
-    final width = MediaQuery.of(context).size.width;
+    final Size size = MediaQuery.of(context).size;
+
     final bool hasStar = true;
     return Scaffold(
         body: SafeArea(
       child: Column(
         children: [
-          TopBarCard(content: 'Ticket Detail'),
+          TopBarCard(
+            content: 'Ticket Detail',
+            height: 48,
+          ),
           MovieCard(
               context: context,
               hasStar: hasStar,
-              height: height,
-              width: width,
+              height: size.height,
+              width: size.width,
               e: movies[0]),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,

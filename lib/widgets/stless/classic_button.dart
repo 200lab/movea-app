@@ -15,6 +15,7 @@ class ClassicButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
+      borderRadius: BorderRadius.circular(20),
       onTap: onTap,
       child: Container(
           alignment: Alignment.center,
@@ -50,6 +51,7 @@ class GradientButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
+      borderRadius: BorderRadius.circular(20),
       onTap: onTap,
       child: Container(
           alignment: Alignment.center,
@@ -87,6 +89,7 @@ class SquareGradientButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
+      borderRadius: BorderRadius.circular(radidus!),
       onTap: onTap,
       child: Container(
           alignment: Alignment.center,

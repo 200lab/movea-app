@@ -11,19 +11,21 @@ class TopUpPage extends StatelessWidget {
   const TopUpPage({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    final height = MediaQuery.of(context).size.height;
-    final width = MediaQuery.of(context).size.width;
+    final Size size = MediaQuery.of(context).size;
 
     return Scaffold(
       body: SafeArea(
           child: Column(
         children: [
-          TopBarCard(content: 'Top Up'),
-          SizedBox(height: width / 8),
+          TopBarCard(
+            content: 'Top Up',
+            height: 48,
+          ),
+          SizedBox(height: size.width / 8),
           Container(
             alignment: Alignment.center,
-            height: height / 14,
-            width: width,
+            height: size.height / 14,
+            width: size.width,
             margin: EdgeInsets.symmetric(horizontal: 20),
             padding: EdgeInsets.symmetric(horizontal: 15),
             decoration: BoxDecoration(
@@ -39,20 +41,20 @@ class TopUpPage extends StatelessWidget {
             ),
           ),
           SizedBox(height: 30),
-          buildAmountBox(height, '50.000', '100.000'),
+          buildAmountBox(size.height, '50.000', '100.000'),
           SizedBox(height: 20),
-          buildAmountBox(height, '150.000', '200.000'),
+          buildAmountBox(size.height, '150.000', '200.000'),
           SizedBox(height: 20),
-          buildAmountBox(height, '250.000', '500.000'),
+          buildAmountBox(size.height, '250.000', '500.000'),
           SizedBox(height: 20),
-          buildAmountBox(height, '700.000', '1.000.000'),
-          SizedBox(height: width / 5),
+          buildAmountBox(size.height, '700.000', '1.000.000'),
+          SizedBox(height: size.width / 5),
           GradientButton(
             gradientColor1: GradientPalette.blue1,
             gradientColor2: GradientPalette.blue2,
             child: Text('Top Up Now'),
-            height: height / 14,
-            width: width * 4 / 5,
+            height: size.height / 14,
+            width: size.width * 4 / 5,
             onTap: () {
               Navigator.push(
                   context,

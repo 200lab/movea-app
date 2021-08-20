@@ -8,21 +8,24 @@ class SessionTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Text(
-          content,
-          style: TxtStyle.heading2,
-        ),
-        GradientText(
-          'View All',
-          gradient: LinearGradient(colors: <Color>[
-            GradientPalette.lightBlue1,
-            GradientPalette.lightBlue2
-          ]),
-        ),
-      ],
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 15),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text(
+            content,
+            style: TxtStyle.heading2,
+          ),
+          GradientText(
+            'View All',
+            gradient: LinearGradient(colors: <Color>[
+              GradientPalette.lightBlue1,
+              GradientPalette.lightBlue2
+            ]),
+          ),
+        ],
+      ),
     );
   }
 }

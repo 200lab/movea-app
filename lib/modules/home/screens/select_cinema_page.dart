@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:movea_app/config/themes/app_color.dart';
 import 'package:movea_app/config/themes/text_style.dart';
+import 'package:movea_app/constants/app_constants.dart';
 import 'package:movea_app/constants/assets_path.dart';
 import 'package:movea_app/modules/home/widgets/time_bar.dart';
 import 'package:movea_app/widgets/stful/date_button.dart';
@@ -12,14 +13,14 @@ class SelectCinemaPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final height = MediaQuery.of(context).size.height;
-    final width = MediaQuery.of(context).size.width;
+    final Size size = MediaQuery.of(context).size;
     return Scaffold(
       body: SafeArea(
         child: Column(
           children: [
             TopBarCard(
               content: 'Ralph Break the\nInternet',
+              height: AppConstant.doubleLineHeight,
             ),
             SizedBox(
               height: 10,
@@ -55,41 +56,41 @@ class SelectCinemaPage extends StatelessWidget {
             SizedBox(
               height: 10,
             ),
-            titleBar(width,'Choose Date'),
+            titleBar(size.width, 'Choose Date'),
             SizedBox(
               height: 10,
             ),
             Container(
-              width: width,
+              width: size.width,
               padding: EdgeInsets.symmetric(horizontal: 20),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   DateButton(
                     ticketState: TicketStates.Busy,
-                    width: width,
-                    height: height,
+                    width: size.width,
+                    height: size.height,
                     day: '21',
                     weekday: 'SAT',
                   ),
                   DateButton(
                     ticketState: TicketStates.Active,
-                    width: width,
-                    height: height,
+                    width: size.width,
+                    height: size.height,
                     day: '21',
                     weekday: 'SAT',
                   ),
                   DateButton(
                     ticketState: TicketStates.Idle,
-                    width: width,
-                    height: height,
+                    width: size.width,
+                    height: size.height,
                     day: '21',
                     weekday: 'SAT',
                   ),
                   DateButton(
                     ticketState: TicketStates.Busy,
-                    width: width,
-                    height: height,
+                    width: size.width,
+                    height: size.height,
                     day: '21',
                     weekday: 'SAT',
                   ),
@@ -99,27 +100,27 @@ class SelectCinemaPage extends StatelessWidget {
             SizedBox(
               height: 15,
             ),
-            titleBar(width, 'Central Park CGV'),
+            titleBar(size.width, 'Central Park CGV'),
             SizedBox(
               height: 10,
             ),
-            TimeBar(height: height, width: width),
+            TimeBar(height: size.height, width: size.width),
             SizedBox(
               height: 15,
             ),
-            titleBar(width, 'FX Sudirman XXI'),
+            titleBar(size.width, 'FX Sudirman XXI'),
             SizedBox(
               height: 10,
             ),
-            TimeBar(height: height, width: width),
+            TimeBar(height: size.height, width: size.width),
             SizedBox(
               height: 15,
             ),
-            titleBar(width, 'Kelapa Gading IMAX'),
+            titleBar(size.width, 'Kelapa Gading IMAX'),
             SizedBox(
               height: 10,
             ),
-            TimeBar(height: height, width: width),
+            TimeBar(height: size.height, width: size.width),
             SizedBox(
               height: 30,
             ),
@@ -127,7 +128,7 @@ class SelectCinemaPage extends StatelessWidget {
                 onTap: () {},
                 gradientColor1: GradientPalette.blue1,
                 gradientColor2: GradientPalette.blue2,
-                edge: height / 14,
+                edge: size.height / 14,
                 radidus: 100,
                 child: ImageIcon(AssetImage(AssetPath.iconNext),
                     color: DarkTheme.white)),
@@ -137,14 +138,14 @@ class SelectCinemaPage extends StatelessWidget {
     );
   }
 
-  Container titleBar(double width,String content) {
+  Container titleBar(double width, String content) {
     return Container(
-            width: width,
-            padding: EdgeInsets.symmetric(horizontal: 20),
-            child: Text(
-              content,
-              style: TxtStyle.heading2,
-            ),
-          );
+      width: width,
+      padding: EdgeInsets.symmetric(horizontal: 20),
+      child: Text(
+        content,
+        style: TxtStyle.heading2,
+      ),
+    );
   }
 }

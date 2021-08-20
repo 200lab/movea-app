@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:movea_app/config/routes/routes.dart';
 import 'package:movea_app/config/themes/app_color.dart';
 import 'package:movea_app/config/themes/text_style.dart';
-import 'package:movea_app/modules/home/screens/movie_info_page.dart';
 import 'package:movea_app/modules/home/screens/success_checkout_page.dart';
+import 'package:movea_app/modules/home/widgets/movie_info.dart';
 import 'package:movea_app/widgets/stless/classic_button.dart';
 import 'package:movea_app/widgets/stless/top_bar.dart';
 
@@ -12,16 +12,16 @@ class CheckOutMoviePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final height = MediaQuery.of(context).size.height;
-    final width = MediaQuery.of(context).size.width;
+    final Size size = MediaQuery.of(context).size;
     return Scaffold(
       body: SafeArea(
         child: Column(
           children: [
             TopBarCard(
-              content: 'Checkout\nMovie',
+              content: 'Checkout Movie',
+              height: 48,
             ),
-            MovieInfo(width: width),
+            MovieInfo(width: size.width),
             SizedBox(height: 20),
             Container(
               child: Row(
@@ -44,8 +44,8 @@ class CheckOutMoviePage extends StatelessWidget {
             GradientButton(
               gradientColor1: GradientPalette.blue1,
               gradientColor2: GradientPalette.blue2,
-              width: width * 4 / 5,
-              height: height / 14,
+              width: size.width * 4 / 5,
+              height: size.height / 14,
               child: Text(
                 'Checkout',
                 style: TxtStyle.heading3,

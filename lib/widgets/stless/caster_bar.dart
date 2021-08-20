@@ -16,7 +16,7 @@ class CatersBar extends StatelessWidget {
             return Column(
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(left: 10,bottom: 10),
+                  padding: const EdgeInsets.only(right: 10,bottom: 10),
                   child: Container(
                     width: width/4.5,
                     height: width/5,

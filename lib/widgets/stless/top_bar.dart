@@ -4,20 +4,21 @@ import 'package:movea_app/config/themes/app_color.dart';
 import 'package:movea_app/config/themes/text_style.dart';
 
 class TopBarCard extends StatelessWidget {
-  final content;
+  final String content;
+  final double height;
 
-  const TopBarCard({Key? key, this.content}) : super(key: key);
+  const TopBarCard({Key? key, required this.content,required this.height}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Stack(children: [
       Container(
-        height: 48,
+        height: height,
           child: Center(
             child: Text(
               content,
               textAlign: TextAlign.center,
-              style: TxtStyle.heading1,
+              style: TxtStyle.heading2,
             ),
           )),
       Container(
