@@ -4,7 +4,6 @@ import 'package:movea_app/config/themes/app_color.dart';
 import 'package:movea_app/config/themes/text_style.dart';
 import 'package:movea_app/constants/assets_path.dart';
 import 'package:movea_app/models/movie.dart';
-import 'package:movea_app/widgets/stful/filter_button.dart';
 import 'package:movea_app/widgets/stful/date_button.dart';
 import 'package:movea_app/widgets/stful/time_button.dart';
 import 'package:movea_app/widgets/stless/card_item.dart';

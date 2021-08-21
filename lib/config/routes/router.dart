@@ -8,6 +8,7 @@ import 'package:movea_app/modules/common_widget/common_widget_page.dart';
 import 'package:movea_app/modules/home/screens/checkout_movie_page.dart';
 import 'package:movea_app/modules/home/screens/home_page.dart';
 import 'package:movea_app/modules/home/screens/movie_info_page.dart';
+import 'package:movea_app/modules/profile/screens/profile_page.dart';
 import 'package:movea_app/modules/ticket/ticket_detail_page.dart';
 import 'package:movea_app/root_page.dart';
 import 'package:movea_app/modules/home/screens/select_cinema_page.dart';
@@ -73,6 +74,10 @@ class Router {
       case 'TopUpPage':
         {
           return MaterialPageRoute(builder: (_) => TopUpPage());
+        }
+      case 'ProfilePage':
+        {
+          return MaterialPageRoute(builder: (_) => ProfilePage());
         }
 
       case 'RootPage':

@@ -22,7 +22,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage>
     with SingleTickerProviderStateMixin {
   late TabController _tabController;
-  int _selectedIndex = 0;
+  // int _selectedIndex = 0;
 
   @override
   void initState() {
@@ -56,8 +56,11 @@ class _HomePageState extends State<HomePage>
                     style: TxtStyle.heading1SemiBold,
                   )),
                   CustomCircleAvatar(
-                    height: MediaQuery.of(context).size.height / 13,
-                    width: MediaQuery.of(context).size.height / 13,
+                    height: size.height / 13,
+                    width:  size.height / 13,
+                    onTap: (){
+                      Navigator.pushNamed(context, Routes.profilePage);
+                    }
                   )
                 ],
               ),

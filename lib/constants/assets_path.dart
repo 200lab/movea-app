@@ -46,4 +46,9 @@ class AssetPath {
   static const String posterSpongebobx2 = '$prePath/2x/poster_spongebob.png';
   static const String trailerRalph1x2 = '$prePath/2x/trailer1.png';
   static const String trailerRalph2x2 = '$prePath/2x/trailer2.png';
+  static const String iconProfilex2 = '$prePath/2x/icon_profile.png';
+  static const String iconHelpx2 = '$prePath/2x/icon_help.png';
+  static const String iconLanguagex2 = '$prePath/2x/icon_language.png';
+  static const String iconRatex2 = '$prePath/2x/icon_rate.png';
+  static const String iconWallet = '$prePath/2x/icon_wallet.png';
 }

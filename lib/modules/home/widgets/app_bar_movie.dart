@@ -1,11 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:movea_app/config/themes/app_color.dart';
-import 'package:movea_app/config/themes/text_style.dart';
-import 'package:movea_app/constants/app_constants.dart';
 import 'package:movea_app/constants/assets_path.dart';
-import 'package:movea_app/widgets/stless/stars_bar.dart';
-
-import 'movie_info.dart';
 
 class AppBarMovie extends SliverPersistentHeaderDelegate {
   final double maxExtended;
@@ -134,11 +129,9 @@ class AppBarMovie extends SliverPersistentHeaderDelegate {
   }
 
   @override
-  // TODO: implement maxExtent
   double get maxExtent => maxExtended;
 
   @override
-  // TODO: implement minExtent
   double get minExtent => minExtended;
 
   @override

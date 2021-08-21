@@ -17,4 +17,7 @@ class Routes {
   static final String ticketDetailPage = 'TicketDetailPage';
   static final String myWalletPage = 'MyWalletPage';
   static final String topUpPage = 'TopUpPage';
+
+  static final String profilePage = 'ProfilePage';
+
 }

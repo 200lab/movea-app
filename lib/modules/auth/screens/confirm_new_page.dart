@@ -32,6 +32,9 @@ class _ConfirmNewPageState extends State<ConfirmNewPage> {
             CustomCircleAvatar(
               height: size.height / 5,
               width: size.height / 5,
+              onTap: (){
+                
+              },
             ),
             SizedBox(
               height: size.height / 12,

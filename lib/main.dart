@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
                 bodyColor: DarkTheme.white,
                 displayColor: DarkTheme.white,
               )),
-      initialRoute: Routes.rootPage,
+      initialRoute: Routes.profilePage,
       onGenerateRoute: router.Router.generateRoute,
     );
   }

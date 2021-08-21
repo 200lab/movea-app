@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:movea_app/config/themes/app_color.dart';
 import 'package:movea_app/config/themes/text_style.dart';
