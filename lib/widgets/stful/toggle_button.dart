@@ -3,15 +3,15 @@ import 'package:movea_app/config/themes/app_color.dart';
 import 'package:movea_app/config/themes/text_style.dart';
 import 'package:movea_app/widgets/stful/date_button.dart';
 
-class AmountBox extends StatefulWidget {
-  final String amount;
-  const AmountBox({Key? key, required this.amount}) : super(key: key);
+class ToggleButton extends StatefulWidget {
+  final Widget child;
+  const ToggleButton({Key? key, required this.child}) : super(key: key);
 
   @override
-  _AmountBoxState createState() => _AmountBoxState();
+  _ToggleButtonState createState() => _ToggleButtonState();
 }
 
-class _AmountBoxState extends State<AmountBox> {
+class _ToggleButtonState extends State<ToggleButton> {
   TicketStates ticketStates = TicketStates.Idle;
   @override
   Widget build(BuildContext context) {
@@ -35,20 +35,10 @@ class _AmountBoxState extends State<AmountBox> {
                 GradientPalette.blue2
               ]),
                 borderRadius: BorderRadius.circular(10)),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              'IDR',
-              style: TxtStyle.heading3Light,
-            ),
-            Text(
-              widget.amount,
-              style: TxtStyle.heading3,
-            )
-          ],
-        ),
+        child: widget.child
       ),
     ));
   }
 }
+
+

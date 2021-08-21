@@ -16,6 +16,7 @@ import 'package:movea_app/modules/home/screens/select_cinema_page.dart';
 import 'package:movea_app/modules/ticket/my_ticket_page.dart';
 import 'package:movea_app/modules/wallet/screens/my_wallet_page.dart';
 import 'package:movea_app/modules/wallet/screens/top_up_page.dart';
+import 'package:movea_app/widgets/stful/pages.dart';
 
 class Router {
   static Route<dynamic>? generateRoute(RouteSettings settings) {
@@ -23,6 +24,10 @@ class Router {
       case 'CommonWidgetPage':
         {
           return MaterialPageRoute(builder: (_) => CommonWidgetPage());
+        }
+      case 'ListPage':
+        {
+          return MaterialPageRoute(builder: (_) => ListPage());
         }
       case 'OnBoardingPage':
         {

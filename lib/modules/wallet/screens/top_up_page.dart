@@ -3,16 +3,16 @@ import 'package:movea_app/config/routes/routes.dart';
 import 'package:movea_app/config/themes/app_color.dart';
 import 'package:movea_app/config/themes/text_style.dart';
 import 'package:movea_app/modules/home/screens/success_checkout_page.dart';
-import 'package:movea_app/modules/wallet/widgets/amount_box.dart';
+import 'package:movea_app/widgets/stful/toggle_button.dart';
 import 'package:movea_app/widgets/stless/classic_button.dart';
 import 'package:movea_app/widgets/stless/top_bar.dart';
 
 class TopUpPage extends StatelessWidget {
   const TopUpPage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
-
     return Scaffold(
       body: SafeArea(
           child: Column(
@@ -41,13 +41,13 @@ class TopUpPage extends StatelessWidget {
             ),
           ),
           SizedBox(height: 30),
-          buildAmountBox(size.height, '50.000', '100.000'),
+          buildAmountRow(size.height, '50.000', '100.000'),
           SizedBox(height: 20),
-          buildAmountBox(size.height, '150.000', '200.000'),
+          buildAmountRow(size.height, '150.000', '200.000'),
           SizedBox(height: 20),
-          buildAmountBox(size.height, '250.000', '500.000'),
+          buildAmountRow(size.height, '250.000', '500.000'),
           SizedBox(height: 20),
-          buildAmountBox(size.height, '700.000', '1.000.000'),
+          buildAmountRow(size.height, '700.000', '1.000.000'),
           SizedBox(height: size.width / 5),
           GradientButton(
             gradientColor1: GradientPalette.blue1,
@@ -74,19 +74,41 @@ class TopUpPage extends StatelessWidget {
     );
   }
 
-  Container buildAmountBox(
-      double height, String amountRight, String amountLeft) {
+  Container buildAmountRow(
+      double height, String amountLeft, String amountRight) {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 20),
       height: height / 12,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          AmountBox(amount: amountRight),
+          ToggleButton(
+            child:
+                Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+              Text(
+                'IDR',
+                style: TxtStyle.heading3Light,
+              ),
+              Text(
+                amountLeft,
+                style: TxtStyle.heading3,
+              ),
+            ]),
+          ),
           SizedBox(width: 20),
-          AmountBox(
-            amount: amountLeft,
-          )
+          ToggleButton(
+            child:
+                Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+              Text(
+                'IDR',
+                style: TxtStyle.heading3Light,
+              ),
+              Text(
+                amountRight,
+                style: TxtStyle.heading3,
+              ),
+            ]),
+          ),
         ],
       ),
     );

@@ -3,7 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:movea_app/config/routes/routes.dart';
 import 'package:movea_app/config/themes/app_color.dart';
 import 'package:movea_app/config/themes/text_style.dart';
-import 'package:movea_app/widgets/stless/classic_button.dart';
+import 'package:movea_app/widgets/stful/toggle_button.dart';
 
 class FavoriteGenrePage extends StatefulWidget {
   const FavoriteGenrePage({Key? key}) : super(key: key);
@@ -15,10 +15,12 @@ class FavoriteGenrePage extends StatefulWidget {
 class _FavoriteGenrePageState extends State<FavoriteGenrePage> {
   @override
   Widget build(BuildContext context) {
+    final Size size = MediaQuery.of(context).size;
+
     return Scaffold(
         body: SafeArea(
             child: ListView(
-      padding: EdgeInsets.all(15),
+      padding: EdgeInsets.symmetric(horizontal: 20),
       children: [
         Column(
           children: [
@@ -42,9 +44,12 @@ class _FavoriteGenrePageState extends State<FavoriteGenrePage> {
                 style: TxtStyle.heading2,
               ),
             ),
-            ReusableRow(contentLeft: 'Honor', contentRight: 'Action'),
-            ReusableRow(contentLeft: 'Drama', contentRight: 'War'),
-            ReusableRow(contentLeft: 'Comedy', contentRight: 'Crime'),
+            buildGenreRow(size.height, 'Honor', 'Action'),
+            SizedBox(height: 20),
+            buildGenreRow(size.height, 'Drama', 'War'),
+            SizedBox(height: 20),
+            buildGenreRow(size.height, 'Comedy', 'Crime'),
+            SizedBox(height: 20),
             Container(
               padding: EdgeInsets.only(bottom: 10),
               alignment: Alignment.centerLeft,
@@ -53,8 +58,12 @@ class _FavoriteGenrePageState extends State<FavoriteGenrePage> {
                 style: TxtStyle.heading2,
               ),
             ),
-            ReusableRow(contentLeft: 'Bahasa', contentRight: 'English'),
-            ReusableRow(contentLeft: 'Japanese', contentRight: 'Korean'),
+            buildGenreRow(size.height, 'Vietnamese', 'English'),
+            SizedBox(height: 20),
+            buildGenreRow(size.height, 'Japanese', 'Korean'),
+            SizedBox(height: 20),
+            // ReusableRow(contentLeft: 'Bahasa', contentRight: 'English'),
+            // ReusableRow(contentLeft: 'Japanese', contentRight: 'Korean'),
             SizedBox(height: 30),
             Container(
               alignment: Alignment.center,
@@ -77,40 +86,28 @@ class _FavoriteGenrePageState extends State<FavoriteGenrePage> {
       ],
     )));
   }
-}
 
-class ReusableRow extends StatelessWidget {
-  final contentRight;
-  final contentLeft;
-
-  const ReusableRow({Key? key, this.contentRight, this.contentLeft})
-      : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
+  Container buildGenreRow(double height, String genreLeft, String genreRight) {
     return Container(
-      padding: EdgeInsets.symmetric(vertical: 10),
+      height: height / 12,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          ClassicButton(
-            width: MediaQuery.of(context).size.width * 0.45,
-            height: MediaQuery.of(context).size.height / 10,
-            color: DarkTheme.darkBackground,
-            onTap: () {},
-            child: Text(
-              contentLeft,
-              style: TxtStyle.heading3Medium,
+          ToggleButton(
+            child: Center(
+              child: Text(
+                genreLeft,
+                style: TxtStyle.heading3,
+              ),
             ),
           ),
-          ClassicButton(
-            width: MediaQuery.of(context).size.width * 0.44,
-            height: MediaQuery.of(context).size.height / 10,
-            color: DarkTheme.darkBackground,
-            onTap: () {},
-            child: Text(
-              contentRight,
-              style: TxtStyle.heading3Medium,
+          SizedBox(width: 20),
+          ToggleButton(
+            child: Center(
+              child: Text(
+                genreRight,
+                style: TxtStyle.heading3,
+              ),
             ),
           ),
         ],

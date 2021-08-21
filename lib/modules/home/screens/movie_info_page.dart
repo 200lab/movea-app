@@ -133,18 +133,7 @@ class MovieInfoPage extends StatelessWidget {
                   GradientPalette.black2,
                 ])),
           ),
-          // Positioned(
-          //   left: 20,
-          //   top: 50,
-          //   child: Container(
-          //     child: IconButton(
-          //       icon: FaIcon(FontAwesomeIcons.arrowLeft),
-          //       onPressed: () {
-          //         Navigator.pop(context);
-          //       },
-          //     ),
-          //   )
-          // ),
+
           ElevatedButton(
             onPressed: () {},
             child: FaIcon(FontAwesomeIcons.arrowLeft),
