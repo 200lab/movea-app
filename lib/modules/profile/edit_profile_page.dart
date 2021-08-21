@@ -8,14 +8,9 @@ import 'package:movea_app/widgets/stless/classic_button.dart';
 import 'package:movea_app/widgets/stless/custom_textfiled.dart';
 import 'package:movea_app/widgets/stless/top_bar.dart';
 
-class SignUpPage extends StatefulWidget {
-  const SignUpPage({Key? key}) : super(key: key);
+class EditProfilePage extends StatelessWidget {
+  const EditProfilePage({Key? key}) : super(key: key);
 
-  @override
-  _SignUpPageState createState() => _SignUpPageState();
-}
-
-class _SignUpPageState extends State<SignUpPage> {
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
@@ -23,7 +18,7 @@ class _SignUpPageState extends State<SignUpPage> {
       body: SafeArea(
         child: ListView(
           children: [
-            TopBarCard(content: 'Create New\nYour Account',height: AppConstant.doubleLineHeight),
+            TopBarCard(content: 'Edit\nYour Profile',height: AppConstant.doubleLineHeight,),
             SizedBox(height: 30),
             Container(
               width: size.height / 8,
@@ -76,13 +71,13 @@ class _SignUpPageState extends State<SignUpPage> {
               padding: const EdgeInsets.symmetric(horizontal: 50),
               child: GradientButton(
                 onTap: (){
-                  Navigator.pushNamed(context, Routes.favoriteGenrePage);
+                  Navigator.pushNamed(context, Routes.rootPage);
                 },
                 height: size.height / 14,
                 gradientColor1: GradientPalette.blue1,
                 gradientColor2: GradientPalette.blue2,
                 child: Text(
-                  'Login',
+                  'Update My Profile',
                   style: TxtStyle.heading3Light,
                 ),
               ),

@@ -22,7 +22,7 @@ class MovieCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
+    return InkWell(
       onTap: () {
         Navigator.pushNamed(context, Routes.ticketDetailPage);
       },
@@ -40,6 +40,7 @@ class MovieCard extends StatelessWidget {
               width: width / 1.75,
               height: height / 6,
               margin: EdgeInsets.only(left: 20, top: 8, bottom: 8),
+              color: Colors.red,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.start,

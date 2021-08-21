@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:movea_app/config/routes/routes.dart';
 import 'package:movea_app/config/themes/app_color.dart';
 import 'package:movea_app/config/themes/text_style.dart';
+import 'package:movea_app/constants/app_constants.dart';
 import 'package:movea_app/widgets/stless/circle_avatar.dart';
 import 'package:movea_app/widgets/stless/classic_button.dart';
 import 'package:movea_app/widgets/stless/top_bar.dart';
@@ -24,17 +25,15 @@ class _ConfirmNewPageState extends State<ConfirmNewPage> {
           children: [
             TopBarCard(
               content: 'Confirm New\nAccount',
-              height: 100,
+              height: AppConstant.doubleLineHeight,
             ),
             SizedBox(
               height: size.height / 8,
             ),
             CustomCircleAvatar(
-              height: size.height / 5,
-              width: size.height / 5,
-              onTap: (){
-                
-              },
+              height: size.height / 5.5,
+              width: size.height / 5.5,
+              onTap: () {},
             ),
             SizedBox(
               height: size.height / 12,
@@ -47,7 +46,7 @@ class _ConfirmNewPageState extends State<ConfirmNewPage> {
               height: 20,
             ),
             Text(
-              'Banhsmif',
+              'Quang Nguyễn',
               style: TxtStyle.heading1Medium,
             ),
             SizedBox(
@@ -63,7 +62,7 @@ class _ConfirmNewPageState extends State<ConfirmNewPage> {
                 style: TxtStyle.heading3Medium,
               ),
               onTap: () {
-                Navigator.pushNamed(context, Routes.homePage);
+                Navigator.pushNamed(context, Routes.rootPage);
               },
             )
           ],

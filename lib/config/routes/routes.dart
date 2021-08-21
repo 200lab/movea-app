@@ -19,5 +19,6 @@ class Routes {
   static final String topUpPage = 'TopUpPage';
 
   static final String profilePage = 'ProfilePage';
+  static final String editProfilePage = 'EditProfilePage';
 
 }

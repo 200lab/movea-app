@@ -67,12 +67,11 @@ class SignInPage extends StatelessWidget {
                 style: TxtStyle.heading3Medium,
               ),
               onTap: () {
-                Navigator.pushNamed(context, Routes.homePage);
+                Navigator.pushNamed(context, Routes.rootPage);
               },
             ),
           ),
           SizedBox(height: 20),
-
           BottomSentence(
             content1: 'Create new account? ',
             content2: 'Sign Up',
@@ -85,21 +84,19 @@ class SignInPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
-                height: 75,
-                width: 75,
-                decoration: BoxDecoration(
-                    color: DarkTheme.white,
-                    borderRadius: BorderRadius.circular(100)),
+                child: Image.asset(
+                  AssetPath.btnGooglex2,
+                  scale: 2,
+                ),
               ),
               SizedBox(
                 width: 30,
               ),
               Container(
-                height: 75,
-                width: 75,
-                decoration: BoxDecoration(
-                    color: DarkTheme.white,
-                    borderRadius: BorderRadius.circular(100)),
+                child: Image.asset(
+                  AssetPath.btnFacebookx2,
+                  scale: 2,
+                ),
               ),
             ],
           )

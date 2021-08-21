@@ -50,5 +50,7 @@ class AssetPath {
   static const String iconHelpx2 = '$prePath/2x/icon_help.png';
   static const String iconLanguagex2 = '$prePath/2x/icon_language.png';
   static const String iconRatex2 = '$prePath/2x/icon_rate.png';
-  static const String iconWallet = '$prePath/2x/icon_wallet.png';
+  static const String iconWalletx2 = '$prePath/2x/icon_wallet.png';
+  static const String btnFacebookx2 = '$prePath/2x/btn_facebook.png';
+  static const String btnGooglex2 = '$prePath/2x/btn_google.png';
 }
