@@ -13,6 +13,7 @@ class Routes {
   static final String homePage = 'HomePage';
   static final String movieInfPage = 'MovieInfoPage';
   static final String selectCinemaPage = 'SelectCinemaPage';
+  static final String selectSeatPage = 'SelectSeatPage';
   static final String checkOutMoviePage = 'CheckOutMoviePage';
   static final String myTicketPage = 'MyTicketPage';
   static final String ticketDetailPage = 'TicketDetailPage';

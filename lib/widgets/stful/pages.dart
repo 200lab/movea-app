@@ -10,6 +10,7 @@ class ListPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
     List<String> pages = [
+      Routes.commonWidgetPage,
       Routes.onBoardingPage,
       Routes.signInPage,
       Routes.signUpPage,
@@ -18,6 +19,7 @@ class ListPage extends StatelessWidget {
       Routes.homePage,
       Routes.movieInfPage,
       Routes.selectCinemaPage,
+      Routes.selectSeatPage,
       Routes.checkOutMoviePage,
       Routes.myTicketPage,
       Routes.myTicketPage,

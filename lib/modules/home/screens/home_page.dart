@@ -39,109 +39,106 @@ class _HomePageState extends State<HomePage>
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
-    return WillPopScope(
-      onWillPop: () async => false,
-      child: Scaffold(
-          body: SafeArea(
-        child: ListView(
-          padding: EdgeInsets.symmetric(vertical: 20),
-          children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 15),
-              child: Row(
-                children: [
-                  Expanded(
-                      child: Text(
-                    'Find Your Best\nMovie',
-                    style: TxtStyle.heading1SemiBold,
-                  )),
-                  CustomCircleAvatar(
-                    height: size.height / 13,
-                    width:  size.height / 13,
-                    onTap: (){
-                      Navigator.pushNamed(context, Routes.profilePage);
-                    }
-                  )
-                ],
-              ),
+    return Scaffold(
+        body: SafeArea(
+      child: ListView(
+        padding: EdgeInsets.symmetric(vertical: 20),
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 15),
+            child: Row(
+              children: [
+                Expanded(
+                    child: Text(
+                  'Find Your Best\nMovie',
+                  style: TxtStyle.heading1SemiBold,
+                )),
+                CustomCircleAvatar(
+                  height: size.height / 13,
+                  width:  size.height / 13,
+                  onTap: (){
+                    Navigator.pushNamed(context, Routes.profilePage);
+                  }
+                )
+              ],
             ),
-            daSpace(),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 15),
-              child: Row(
-                children: [
-                  searchFiled(context),
-                  SizedBox(width: 10),
-                  SquareGradientButton(
-                      onTap: () {},
-                      gradientColor1: GradientPalette.blue1,
-                      gradientColor2: GradientPalette.blue2,
-                      edge: size.height / 14,
-                      radidus: 20,
-                      child: ImageIcon(AssetImage(AssetPath.iconControl),
-                          color: DarkTheme.white)),
-                ],
-              ),
+          ),
+          daSpace(),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 15),
+            child: Row(
+              children: [
+                searchFiled(context),
+                SizedBox(width: 10),
+                SquareGradientButton(
+                    onTap: () {},
+                    gradientColor1: GradientPalette.blue1,
+                    gradientColor2: GradientPalette.blue2,
+                    edge: size.height / 14,
+                    radidus: 20,
+                    child: ImageIcon(AssetImage(AssetPath.iconControl),
+                        color: DarkTheme.white)),
+              ],
             ),
-            daSpace(),
-            GenreBox(size: size, tabController: _tabController),
-            daSpace(),
-            SessionTitle(content: 'Coming Soon'),
-            daSpace(),
-            Container(
-              width: size.width,
-              child: Row(
-                children: movies.sublist(0, 3).map((e) {
-                  return Builder(builder: (context) {
-                    return GestureDetector(
-                      onTap: () {
-                        Navigator.pushNamed(context, Routes.movieInfPage);
-                      },
-                      child: Container(
-                        padding: EdgeInsets.only(left: 15),
-                        height: 150,
-                        child: Image(
-                          image: AssetImage(e.posterImg),
-                          fit: BoxFit.cover,
-                        ),
+          ),
+          daSpace(),
+          GenreBox(size: size, tabController: _tabController),
+          daSpace(),
+          SessionTitle(content: 'Coming Soon'),
+          daSpace(),
+          Container(
+            width: size.width,
+            child: Row(
+              children: movies.sublist(0, 3).map((e) {
+                return Builder(builder: (context) {
+                  return GestureDetector(
+                    onTap: () {
+                      Navigator.pushNamed(context, Routes.movieInfPage);
+                    },
+                    child: Container(
+                      padding: EdgeInsets.only(left: 15),
+                      height: 150,
+                      child: Image(
+                        image: AssetImage(e.posterImg),
+                        fit: BoxFit.cover,
                       ),
-                    );
-                  });
-                }).toList(),
-              ),
+                    ),
+                  );
+                });
+              }).toList(),
             ),
-            daSpace(),
-            SessionTitle(content: 'Promo'),
-            daSpace(),
-            Container(
-              height: 80,
-              width: size.width,
-              padding: EdgeInsets.symmetric(horizontal: 20),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
-                gradient: LinearGradient(
-                    colors: [GradientPalette.blue1, GradientPalette.blue2]),
-              ),
-              child: Row(
-                children: [
-                  Expanded(
-                      flex: 3,
-                      child: Text(
-                        'Student Holiday',
-                        style: TxtStyle.heading3Medium,
-                      )),
-                  Expanded(
-                      child: Text(
-                    'OFF 50%',
-                    style: TxtStyle.heading4,
-                  ))
-                ],
-              ),
-            )
-          ],
-        ),
-      )),
-    );
+          ),
+          daSpace(),
+          SessionTitle(content: 'Promo'),
+          daSpace(),
+          Container(
+            height: 80,
+            width: size.width,
+            padding: EdgeInsets.symmetric(horizontal: 20),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(20),
+              gradient: LinearGradient(
+                  colors: [GradientPalette.blue1, GradientPalette.blue2]),
+            ),
+            child: Row(
+              children: [
+                Expanded(
+                    flex: 3,
+                    child: Text(
+                      'Student Holiday',
+                      style: TxtStyle.heading3Medium,
+                    )),
+                Expanded(
+                    child: Text(
+                  'OFF 50%',
+                  style: TxtStyle.heading4,
+                ))
+              ],
+            ),
+          )
+        ],
+      ),
+    ));
   }
 
   Expanded searchFiled(BuildContext context) {

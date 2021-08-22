@@ -125,7 +125,8 @@ class SelectCinemaPage extends StatelessWidget {
               height: 30,
             ),
             SquareGradientButton(
-                onTap: () {},
+                onTap: () {
+                },
                 gradientColor1: GradientPalette.blue1,
                 gradientColor2: GradientPalette.blue2,
                 edge: size.height / 14,

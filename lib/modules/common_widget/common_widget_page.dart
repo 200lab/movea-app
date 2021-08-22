@@ -6,6 +6,7 @@ import 'package:movea_app/constants/assets_path.dart';
 import 'package:movea_app/models/movie.dart';
 import 'package:movea_app/widgets/stful/date_button.dart';
 import 'package:movea_app/widgets/stful/time_button.dart';
+import 'package:movea_app/widgets/stful/toggle_button.dart';
 import 'package:movea_app/widgets/stless/card_item.dart';
 import 'package:movea_app/widgets/stless/classic_button.dart';
 import 'package:movea_app/widgets/stless/movie_item.dart';
@@ -22,12 +23,12 @@ class _CommonWidgetPageState extends State<CommonWidgetPage> {
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
+    final List<String> seatRow = ['A','B','C','D','E'];
+    final List<String> seatNumber = ['1','2','3','4','5','6'];
+
     return Scaffold(
       body: ListView(
         children: [
-          Text('Stateless',
-              style: TxtStyle.heading1, textAlign: TextAlign.center),
-          buildSizedBox(),
           TopBarCard(
             content: 'Create New\nYour Account',
             height: 96,
@@ -78,6 +79,15 @@ class _CommonWidgetPageState extends State<CommonWidgetPage> {
             ),
           ),
           buildSizedBox(),
+          Container(
+              height: size.height / 14,
+              child: ToggleButton(
+                  child: Center(
+                      child: Text(
+                'Toggle Button',
+                style: TxtStyle.heading3Medium,
+              )))),
+          buildSizedBox(),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
@@ -109,7 +119,17 @@ class _CommonWidgetPageState extends State<CommonWidgetPage> {
                     color: DarkTheme.white,
                   ),
                 ),
-              )
+              ),
+              Container(
+                width: 48,
+                height: 48,
+                child: ToggleButton(
+                    child: Center(
+                        child: Text(
+                  'A1',
+                  style: TxtStyle.heading3Medium,
+                ))),
+              ),
             ],
           ),
           buildSizedBox(),
@@ -129,32 +149,6 @@ class _CommonWidgetPageState extends State<CommonWidgetPage> {
             ],
           ),
           buildSizedBox(),
-          // Row(
-          //   mainAxisAlignment: MainAxisAlignment.spaceAround,
-          //   children: [
-          //     FilterButton(
-          //       height: size.width / 10,
-          //       width: size.width / 5,
-          //       content: 'All',
-          //     ),
-          //     FilterButton(
-          //       height: size.width / 10,
-          //       width: size.width / 5,
-          //       content: 'All',
-          //     ),
-          //     FilterButton(
-          //       height: size.width / 10,
-          //       width: size.width / 5,
-          //       content: 'All',
-          //     ),
-          //     FilterButton(
-          //       height: size.width / 10,
-          //       width: size.width / 5,
-          //       content: 'All',
-          //     ),
-          //   ],
-          // ),
-          buildSizedBox(),
           CarouselSlider(
               options: CarouselOptions(autoPlay: true, enlargeCenterPage: true),
               items: movies.map((e) {
@@ -166,41 +160,7 @@ class _CommonWidgetPageState extends State<CommonWidgetPage> {
                   );
                 });
               }).toList()),
-          buildSizedBox(),
-          CardPromo(), //Error Export
-          buildSizedBox(),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                DateButton(
-                    height: size.height,
-                    width: size.width,
-                    weekday: 'SAT',
-                    day: '21',
-                    ticketState: TicketStates.Idle),
-                DateButton(
-                    height: size.height,
-                    width: size.width,
-                    weekday: 'SAT',
-                    day: '21',
-                    ticketState: TicketStates.Idle),
-                DateButton(
-                    height: size.height,
-                    width: size.width,
-                    weekday: 'SAT',
-                    day: '21',
-                    ticketState: TicketStates.Idle),
-                DateButton(
-                    height: size.height,
-                    width: size.width,
-                    weekday: 'SAT',
-                    day: '21',
-                    ticketState: TicketStates.Idle),
-              ],
-            ),
-          ),
+          // CardPromo(), //Error Export
           buildSizedBox(),
           Padding(
             padding: const EdgeInsets.only(left: 20),
@@ -237,9 +197,40 @@ class _CommonWidgetPageState extends State<CommonWidgetPage> {
             ),
           ),
           buildSizedBox(),
+          buildSeatRow(),
+          Container(
+            height: size.height/2,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: seatRow.map((row) => Builder(builder: (context){
+                return Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: seatNumber.map((number) {
+                    return Container(
+                      width: 48,
+                      height: 48,
+                      child: ToggleButton(
+                          child: Center(
+                              child: Text(
+                                row + number,
+                                style: TxtStyle.heading3Medium,
+                              ))),
+                    );
+                  }).toList()
+                );
+              })).toList(),
+            ),
+          )
         ],
       ),
     );
+  }
+
+  Widget buildSeatRow() {
+    for(int i = 0;i<5;i++) {
+
+    }
+    return Container();
   }
 
   SizedBox buildSizedBox() {
