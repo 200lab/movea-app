@@ -1,4 +1,3 @@
-
 class AssetPath {
   static const String prePath = 'assets/images';
   static const String iconAdd = '$prePath/add.png';
