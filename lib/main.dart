@@ -23,6 +23,10 @@ class MyApp extends StatelessWidget {
           primaryColor: DarkTheme.darkerBackground,
           scaffoldBackgroundColor: DarkTheme.darkerBackground,
           fontFamily: 'montserrat',
+          appBarTheme: AppBarTheme.of(context).copyWith(
+            backgroundColor: DarkTheme.darkerBackground,
+            shadowColor: Colors.transparent
+          ),
           textTheme: Theme.of(context).textTheme.apply(
                 bodyColor: DarkTheme.white,
                 displayColor: DarkTheme.white,
