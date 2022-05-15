@@ -96,3 +96,6 @@ final List<TicketStates> timeStates_4 = [
   TicketStates.idle,
   TicketStates.idle
 ];
+
+final List<String> seatRow = ['A', 'B', 'C', 'D', 'E'];
+final List<String> seatNumber = ['1', '2', '3', '4', '5', '6'];
