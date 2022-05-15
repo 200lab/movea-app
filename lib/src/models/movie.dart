@@ -1,6 +1,8 @@
 import '../constants/asset_path.dart';
 import 'cast.dart';
 
+enum TicketStates { idle, busy, active }
+
 //app data right here
 class Movie {
   String posterImg;
@@ -58,4 +60,39 @@ final List<Movie> movies = [
       trailerImg: '',
       casters: [],
       trailers: []),
+];
+
+
+final List<String> days = ['SAT', 'SUN', 'MON', 'TUE'];
+final List<String> times = ['12:20', '14:30', '16:40', '19:00'];
+
+final List<TicketStates> dateStates = [
+  TicketStates.idle,
+  TicketStates.active,
+  TicketStates.busy,
+  TicketStates.idle
+];
+final List<TicketStates> timeStates_1 = [
+  TicketStates.idle,
+  TicketStates.idle,
+  TicketStates.busy,
+  TicketStates.idle
+];
+final List<TicketStates> timeStates_2 = [
+  TicketStates.idle,
+  TicketStates.busy,
+  TicketStates.active,
+  TicketStates.idle
+];
+final List<TicketStates> timeStates_3 = [
+  TicketStates.idle,
+  TicketStates.busy,
+  TicketStates.idle,
+  TicketStates.idle
+];
+final List<TicketStates> timeStates_4 = [
+  TicketStates.idle,
+  TicketStates.busy,
+  TicketStates.idle,
+  TicketStates.idle
 ];
