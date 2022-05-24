@@ -9,6 +9,7 @@ import 'package:movea_app/src/modules/selectCinema/select_seat_page.dart';
 import '../../models/movie.dart';
 import 'component/custom_header.dart';
 import 'component/next_button.dart';
+import 'component/select_country.dart';
 
 class SelectCinemaPage extends StatelessWidget {
   const SelectCinemaPage({Key? key}) : super(key: key);
@@ -25,38 +26,7 @@ class SelectCinemaPage extends StatelessWidget {
               size: size,
               content: 'Ralph Breaks the\nInternet',
             ),
-            Container(
-              margin: const EdgeInsets.symmetric(vertical: 16, horizontal: 24),
-              height: size.height / 14,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  border: Border.all(color: DarkTheme.white)),
-              child: Row(
-                children: const [
-                  Expanded(
-                      child: TextField(
-                    decoration: InputDecoration(
-                        hintText: 'Select Your Contry',
-                        hintStyle: TxtStyle.heading3Light,
-                        icon: Padding(
-                          padding: EdgeInsets.only(left: 8.0),
-                          child: ImageIcon(
-                            AssetImage(AssetPath.iconLocation),
-                            color: DarkTheme.white,
-                          ),
-                        )),
-                  )),
-                  Padding(
-                    padding: EdgeInsets.only(right: 8.0),
-                    child: Icon(
-                      Icons.keyboard_arrow_down,
-                      size: 36,
-                      color: DarkTheme.white,
-                    ),
-                  )
-                ],
-              ),
-            ),
+            SelectCountryWidget(size: size),
             buildTitle('Choose Date'),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 24.0),

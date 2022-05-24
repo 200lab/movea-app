@@ -22,7 +22,7 @@ class CustomHeader extends StatelessWidget {
           height: size.height / 10,
           child: Center(
             child: Text(
-              content ?? "Null",
+              content,
               style: TxtStyle.heading1,
               textAlign: TextAlign.center,
             ),
