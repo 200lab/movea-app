@@ -3,7 +3,7 @@ import 'package:movea_app/src/config/app_color.dart';
 import 'package:movea_app/src/config/text_style.dart';
 import 'package:movea_app/src/constants/asset_path.dart';
 import 'package:movea_app/src/models/movie.dart';
-import 'package:movea_app/src/modules/selectCinema/check_out_page.dart';
+import 'check_out_page.dart';
 import 'component/arrow_back_button.dart';
 import 'component/movie_title.dart';
 

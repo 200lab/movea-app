@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:movea_app/src/config/app_color.dart';
 import 'package:movea_app/src/modules/selectCinema/component/custom_header.dart';
 
-import '../../config/app_color.dart';
 import '../../config/text_style.dart';
 import '../../constants/asset_path.dart';
 import '../../widgets/star.dart';
@@ -21,13 +21,8 @@ class CheckOutPage extends StatelessWidget {
               margin: const EdgeInsets.symmetric(horizontal: 24),
               padding: const EdgeInsets.symmetric(vertical: 24),
               decoration: const BoxDecoration(
-                border: Border(
-                  bottom: BorderSide(
-                    color: Colors.white,
-                    width: 1.0,
-                  ),
-                ),
-              ),
+                  border: Border(
+                      bottom: BorderSide(color: DarkTheme.white, width: 1))),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -39,167 +34,26 @@ class CheckOutPage extends StatelessWidget {
                       scale: 1.2,
                     ),
                   ),
-                  Expanded(
-                      child: Column(
-                    children: [
-                      Container(
-                        padding: const EdgeInsets.only(left: 8, bottom: 8),
-                        width: size.width,
-                        child: const Text(
-                          'Ralph Break the Internet',
-                          style: TxtStyle.heading3Medium,
-                        ),
-                      ),
-                      Container(
-                        margin: const EdgeInsets.only(left: 8, bottom: 8),
-                        child: Row(
-                          children: const [
-                            StarComponent(),
-                            StarComponent(),
-                            StarComponent(),
-                            StarComponent(),
-                            StarComponent(),
-                            Text(
-                              '(5.0)',
-                              style: TxtStyle.heading4,
-                            )
-                          ],
-                        ),
-                      ),
-                      Container(
-                        padding: const EdgeInsets.only(left: 8, bottom: 8),
-                        width: size.width,
-                        child: const Text(
-                          'Action & adventure, Comedy',
-                          style: TxtStyle.heading4Light,
-                        ),
-                      ),
-                      Container(
-                        padding: const EdgeInsets.only(left: 8, bottom: 8),
-                        width: size.width,
-                        child: const Text(
-                          '1h41min',
-                          style: TxtStyle.heading4Light,
-                        ),
-                      )
-                    ],
-                  ))
+                  MovieInfoWidget(size: size)
                 ],
               ),
             ),
+            buildPriceTag('ID Order', '22081996'),
+            buildPriceTag('Cinema', 'FX Sudirman XXI'),
+            buildPriceTag('Date & Time', 'Sun May 22,  16:40'),
+            buildPriceTag('Seat Number', 'D7,D8,D9'),
+            buildPriceTag('Price', '50.000 VND x 3'),
+            buildPriceTag('Total', '150.000 VND'),
             Container(
               margin: const EdgeInsets.symmetric(horizontal: 24),
-              padding: const EdgeInsets.symmetric(vertical: 12),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
-                  Text(
-                    'ID Order',
-                    style: TxtStyle.heading4Light,
-                  ),
-                  Text(
-                    '22081996',
-                    style: TxtStyle.heading4,
-                  ),
-                ],
-              ),
-            ),
-            Container(
-              margin: const EdgeInsets.symmetric(horizontal: 24),
-              padding: const EdgeInsets.symmetric(vertical: 12),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
-                  Text(
-                    'Cinema',
-                    style: TxtStyle.heading4Light,
-                  ),
-                  Text(
-                    'FX Sudirman XXI',
-                    style: TxtStyle.heading4,
-                  ),
-                ],
-              ),
-            ),
-            Container(
-              margin: const EdgeInsets.symmetric(horizontal: 24),
-              padding: const EdgeInsets.symmetric(vertical: 12),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
-                  Text(
-                    'Date & Time',
-                    style: TxtStyle.heading4Light,
-                  ),
-                  Text(
-                    'Sun May 22,  16:40',
-                    style: TxtStyle.heading4,
-                  ),
-                ],
-              ),
-            ),
-            Container(
-              margin: const EdgeInsets.symmetric(horizontal: 24),
-              padding: const EdgeInsets.symmetric(vertical: 12),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
-                  Text(
-                    'Seat Number',
-                    style: TxtStyle.heading4Light,
-                  ),
-                  Text(
-                    'D7,D8,D9',
-                    style: TxtStyle.heading4,
-                  ),
-                ],
-              ),
-            ),
-            Container(
-              margin: const EdgeInsets.symmetric(horizontal: 24),
-              padding: const EdgeInsets.symmetric(vertical: 12),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
-                  Text(
-                    'Price',
-                    style: TxtStyle.heading4Light,
-                  ),
-                  Text(
-                    '50.000 VND x 3',
-                    style: TxtStyle.heading4,
-                  ),
-                ],
-              ),
-            ),
-            Container(
-              margin: const EdgeInsets.symmetric(horizontal: 24),
-              padding: const EdgeInsets.symmetric(vertical: 12),
+              padding: const EdgeInsets.only(bottom: 24),
               decoration: const BoxDecoration(
-                border: Border(
-                  bottom: BorderSide(
-                    color: Colors.white,
-                    width: 1.0,
-                  ),
-                ),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
-                  Text(
-                    'Total',
-                    style: TxtStyle.heading4Light,
-                  ),
-                  Text(
-                    '150.000 VND',
-                    style: TxtStyle.heading4,
-                  ),
-                ],
-              ),
+                  border: Border(
+                      bottom: BorderSide(color: DarkTheme.white, width: 1))),
             ),
             Container(
               margin: const EdgeInsets.symmetric(horizontal: 24),
-              padding: const EdgeInsets.symmetric(vertical: 24),
+              padding: const EdgeInsets.symmetric(vertical: 12),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -209,27 +63,24 @@ class CheckOutPage extends StatelessWidget {
                   ),
                   Text(
                     '200.000 VND',
-                    style:
-                        TxtStyle.heading4.copyWith(color: DarkTheme.blueMain),
+                    style: TxtStyle.heading4
+                        .copyWith(color: GradientPalette.lightBlue1),
                   ),
                 ],
               ),
             ),
             Expanded(
                 child: Center(
-              child: GestureDetector(
-                onTap: () {},
-                child: Container(
-                  alignment: Alignment.center,
-                  height: size.height / 16,
-                  width: size.width / 2,
-                  decoration: BoxDecoration(
-                      color: DarkTheme.blueMain,
-                      borderRadius: BorderRadius.circular(20)),
-                  child: const Text(
-                    'Check Out',
-                    style: TxtStyle.heading3,
-                  ),
+              child: Container(
+                height: size.height / 16,
+                width: size.width / 2,
+                decoration: BoxDecoration(
+                    color: DarkTheme.blueMain,
+                    borderRadius: BorderRadius.circular(20)),
+                alignment: Alignment.center,
+                child: const Text(
+                  'Check Out',
+                  style: TxtStyle.heading3,
                 ),
               ),
             ))
@@ -237,5 +88,83 @@ class CheckOutPage extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  Container buildPriceTag(String content, String price) {
+    return Container(
+      margin: const EdgeInsets.symmetric(horizontal: 24),
+      padding: const EdgeInsets.symmetric(vertical: 12),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text(
+            content,
+            style: TxtStyle.heading4Light,
+          ),
+          Text(
+            price,
+            style: TxtStyle.heading4,
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class MovieInfoWidget extends StatelessWidget {
+  const MovieInfoWidget({
+    Key? key,
+    required this.size,
+  }) : super(key: key);
+
+  final Size size;
+
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+        child: Column(
+      children: [
+        Container(
+          padding: const EdgeInsets.only(left: 8, bottom: 8),
+          width: size.width,
+          child: const Text(
+            'Ralph Break the Internet',
+            style: TxtStyle.heading3Medium,
+          ),
+        ),
+        Container(
+          margin: const EdgeInsets.only(left: 8, bottom: 8),
+          child: Row(
+            children: const [
+              StarComponent(),
+              StarComponent(),
+              StarComponent(),
+              StarComponent(),
+              StarComponent(),
+              Text(
+                '(5.0)',
+                style: TxtStyle.heading4,
+              )
+            ],
+          ),
+        ),
+        Container(
+          padding: const EdgeInsets.only(left: 8, bottom: 8),
+          width: size.width,
+          child: const Text(
+            'Action & adventure, Comedy',
+            style: TxtStyle.heading4Light,
+          ),
+        ),
+        Container(
+          padding: const EdgeInsets.only(left: 8, bottom: 8),
+          width: size.width,
+          child: const Text(
+            '1h41min',
+            style: TxtStyle.heading4Light,
+          ),
+        )
+      ],
+    ));
   }
 }
